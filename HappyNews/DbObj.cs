@@ -21,7 +21,7 @@ namespace HappyNews
                         Source = "Onliner1",
                         DateCreate = DateTime.Now,
                         IndexOfPosition = "1",
-                        BodyNews = "news-1 news-1 news-1 news-1 news-1 news-1 news-1 news-1 news-1news-1 news-1 news-1 news-1 news-1 news-1 news-1 news-1 news-1"
+                        BodyNews = "news-1 news-1 news-1 news-1 news-1news-1 news-1 news-1 news-1 news-1news-1 news-1 news-1 news-1 news-1news-1 news-1 news-1 news-1 news-1 news-1 news-1 news-1 news-1news-1 news-1 news-1 news-1 news-1 news-1 news-1 news-1 news-1"
 
                     },
 
@@ -31,7 +31,7 @@ namespace HappyNews
                         Source = "Onliner2",
                         DateCreate = DateTime.Now,
                         IndexOfPosition = "2",
-                        BodyNews = "news-2 news-2 news-2 news-2 news-2 news-2 news-2 news-2 news-2news-2 news-2 news-2 news-2 news-2 news-2 news-2 news-2 news-2"
+                        BodyNews = "news-2 news-2 news-2 news-2 news-2 news-2 news-2 news-2 news-2news-2 news-22 news-2news-2 news-22 news-2news-2 news-22 news-2news-2 news-22 news-2news-2 news-2 news-2 news-2 news-2 news-2 news-2 news-2 news-2"
                     },
 
                     new News
