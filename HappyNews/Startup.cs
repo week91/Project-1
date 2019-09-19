@@ -43,9 +43,9 @@ namespace HappyNews
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             using (var scope = app.ApplicationServices.CreateScope()){
-                DbContent content = scope.ServiceProvider.GetRequiredService<DbContent>();
-                DbObj.Initial(content);
-            }
+                var content = scope.ServiceProvider.GetRequiredService<DbContent>();
+               DbObj.InitialData(content);
+           }
 
             {
                 
