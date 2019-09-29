@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using HappyNews.Models;
+using HappyNews.Repo;
+using HappyNews.UoW;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -18,9 +16,9 @@ namespace HappyNews
         
         private IConfigurationRoot _conf;
 
-        public Startup(IHostingEnvironment _host)
+        public Startup(IHostingEnvironment host)
         {
-            _conf=new ConfigurationBuilder().SetBasePath(_host.ContentRootPath).AddJsonFile("DbConnection.json").Build();
+            _conf=new ConfigurationBuilder().SetBasePath(host.ContentRootPath).AddJsonFile("DbConnection.json").Build();
         }
     
 
@@ -28,6 +26,11 @@ namespace HappyNews
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DbContent>(option=>option.UseSqlServer(_conf.GetConnectionString("DefaultConnection")));
+            services.AddTransient<IGenericRepository<Admins>, AdminsRepo>();
+            services.AddTransient<IGenericRepository<Users>, Usersrepo>();
+            services.AddTransient<IGenericRepository<News>,NewsRepo>();
+            services.AddTransient<IGenericRepository<Comments>,CommentsRepo>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.

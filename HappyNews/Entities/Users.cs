@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using HappyNews.Entities;
 
 namespace HappyNews.Models
 {
-    public class Admins
+    public class Users:DbEntities
     {
-        public int Id { get; set; }
+        public Guid IdUsers { get; set; }
         public string Name { get; set; }
         public string Mail { get; set; }
-
+        public  ICollection<Comments> UserComments { get; set; }
+      
     }
 }

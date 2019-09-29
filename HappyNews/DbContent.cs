@@ -8,21 +8,19 @@ using Microsoft.EntityFrameworkCore.Internal;
 
 namespace HappyNews
 {
-    public class DbContent:DbContext
+    public sealed class DbContent : DbContext
 
     {
-        
-        public DbContent(DbContextOptions<DbContent> options) 
+        public DbSet<News> Newses { get; set; }
+        public DbSet<Comments> Comment { get; set; }
+        public DbSet<Users> User { get; set; }
+        public DbSet<Admins> Admin { get; set; }
+
+        public DbContent(DbContextOptions<DbContent> options)
             : base(options)
         {
             Database.EnsureCreated();
         }
-        public DbSet<News> Newses{ get; set; }
-        public DbSet<Comments> Comment { get; set; }
-        public DbSet<Users> User { get; set; }
-        public DbSet<Admins> Admin { get; set; }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-        }
+
     }
 }
