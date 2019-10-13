@@ -4,7 +4,7 @@ namespace HappyNews.Repo
 {
     public class Usersrepo: EntityFrameworkRepo<Users>
     {
-        Usersrepo(DbContent _content) : base(_content)
+      public  Usersrepo(DbContent _content) : base(_content)
         {
 
         }

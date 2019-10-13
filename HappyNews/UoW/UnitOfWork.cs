@@ -12,11 +12,7 @@ namespace HappyNews.UoW
         private readonly IGenericRepository<News> _newsRepository;
         private readonly IGenericRepository<Comments> _commentsRepository;
 
-        public UnitOfWork(DbContent context,
-            IGenericRepository<Users> users,
-            IGenericRepository<Admins> admins,
-            IGenericRepository<News> news,
-            IGenericRepository<Comments> comments)
+        public UnitOfWork(DbContent context,IGenericRepository<Users> users,IGenericRepository<Admins> admins,IGenericRepository<News> news,IGenericRepository<Comments> comments)
         {
             _context = context;
             _usersRepository = users;
@@ -26,18 +22,13 @@ namespace HappyNews.UoW
 
         }
 
-
-
-
-
-
-        public IGenericRepository<Users> User => _usersRepository;
-
         public IGenericRepository<Admins> Admins => _adminsRepository;
 
         public IGenericRepository<News> News => _newsRepository;
 
         public IGenericRepository<Comments> Comments => _commentsRepository;
+        public IGenericRepository<Users> User => _usersRepository;
+        
         private bool disposed = false;
 
         public virtual void Dispose(bool disposing)

@@ -58,3 +58,4 @@ C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\HappyNews.Views.pdb
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\HappyNews.dll
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\HappyNews.pdb
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\HappyNews.csproj.CopyComplete
+C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Index.g.cshtml.cs

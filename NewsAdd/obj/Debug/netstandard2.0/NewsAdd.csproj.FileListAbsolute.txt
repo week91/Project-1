@@ -1,0 +1,14 @@
+C:\repohome\Project-1\NewsAdd\bin\Debug\netstandard2.0\NewsAdd.deps.json
+C:\repohome\Project-1\NewsAdd\bin\Debug\netstandard2.0\NewsAdd.dll
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\NewsAdd.csprojAssemblyReference.cache
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\NewsAdd.csproj.CoreCompileInputs.cache
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\NewsAdd.RazorAssemblyInfo.cache
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\NewsAdd.RazorAssemblyInfo.cs
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\NewsAdd.AssemblyInfoInputs.cache
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\NewsAdd.AssemblyInfo.cs
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\NewsAdd.TagHelpers.input.cache
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\NewsAdd.TagHelpers.output.cache
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\NewsAdd.RazorCoreGenerate.cache
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\Razor\Areas\MyFeature\Pages\Page1.g.cshtml.cs
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\NewsAdd.RazorTargetAssemblyInfo.cache
+C:\repohome\Project-1\NewsAdd\obj\Debug\netstandard2.0\NewsAdd.RazorTargetAssemblyInfo.cs

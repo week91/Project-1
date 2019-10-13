@@ -47,7 +47,7 @@ namespace HappyNews
         {
             using (var scope = app.ApplicationServices.CreateScope()){
                 var content = scope.ServiceProvider.GetRequiredService<DbContent>();
-               DbObj.InitialData(content);
+               
            }
 
             {
