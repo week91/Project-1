@@ -18,7 +18,7 @@ namespace HappyNews.Controllers
         public HomeController(IUnitOfWork uow)
         {
            _unitOfWork =uow;
-           
+        
         }
 
         public IActionResult index()
@@ -28,7 +28,7 @@ namespace HappyNews.Controllers
             var rssList = rss.AddUrls("http://s13.ru/rss/.rss");
 
             
-
+            
             var NewsInBase = _unitOfWork.News.GetAll();
             
             foreach (var newss in NewsInBase)

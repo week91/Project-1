@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Identity;
 
 namespace HappyNews.Models
 {
-    public class User1:IdentityUser
+    public class User:IdentityUser
 
     {
     public string FullName { get; set; }
+    public ICollection<Comments> UserComments { get; set; }
+
     }
 }

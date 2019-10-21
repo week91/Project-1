@@ -13,9 +13,9 @@ namespace HappyNews.Controllers
 {
     public class UserController1 : Controller
     {
-        private readonly UserManager<User1> _userManager;
+        private readonly UserManager<User> _userManager;
 
-        public UserController1(UserManager<User1> userManager)
+        public UserController1(UserManager<User> userManager)
         {
             _userManager = userManager;
         }
@@ -29,7 +29,7 @@ namespace HappyNews.Controllers
         public async Task<IActionResult> Create(CreatUserVM userViewModel)
         {
             if (!ModelState.IsValid) return View(userViewModel);
-            var result = await _userManager.CreateAsync(new User1()
+            var result = await _userManager.CreateAsync(new User()
             {
                 Email = userViewModel.Email,
                 UserName = userViewModel.Email,

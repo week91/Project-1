@@ -29,13 +29,12 @@ namespace HappyNews
 
             //services.AddDbContext<ApplicationContext>(option => option.UseSqlServer(_conf.GetConnectionString("DefaultConnection")));
 
-            services.AddTransient<IGenericRepository<Admins>, AdminsRepo>();
-            services.AddTransient<IGenericRepository<Users>, Usersrepo>();
+          
             services.AddTransient<IGenericRepository<News>,NewsRepo>();
             services.AddTransient<IGenericRepository<Comments>,CommentsRepo>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-
-            services.AddIdentity<User1, IdentityRole>()
+        
+            services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<DbContent>();
 
             services.AddMvc();

@@ -14,13 +14,13 @@ namespace HappyNews.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<User1> _userManager;
-        private readonly SignInManager<User1> _signInManager;
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
       //  private readonly ISmtpEmailSender _emailSender;
 
-        public AccountController(UserManager<User1> userManager,
-            SignInManager<User1> signInManager,
+        public AccountController(UserManager<User> userManager,
+            SignInManager<User> signInManager,
             RoleManager<IdentityRole> roleManager) //ISmtpEmailSender emailSender)
         {
             _userManager = userManager;
@@ -40,7 +40,7 @@ namespace HappyNews.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new User1 { Email = model.Email, UserName = model.Email, FullName = model.FullName };
+                var user = new User { Email = model.Email, UserName = model.Email, FullName = model.FullName };
                 var result = await _userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)

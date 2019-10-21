@@ -59,10 +59,13 @@ C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\HappyNews.dll
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\HappyNews.pdb
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\HappyNews.csproj.CopyComplete
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Index.g.cshtml.cs
-C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Index1.g.cshtml.cs
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Account\ChangePassword.g.cshtml.cs
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\UserController1\Create.g.cshtml.cs
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\UserController1\Edit.g.cshtml.cs
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\UserController1\Index.g.cshtml.cs
+C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Role\Create.g.cshtml.cs
+C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Role\Delete.g.cshtml.cs
+C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Role\Edit.g.cshtml.cs
+C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Role\Index.g.cshtml.cs

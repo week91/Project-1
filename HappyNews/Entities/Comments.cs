@@ -10,7 +10,7 @@ namespace HappyNews.Models
     public DateTime DateOfCreate { get; set; }
     public string CommentText { get; set; }
     public Guid UseriD { get; set; }
-    public Users User { get; set; }
+    public User User1 { get; set; }
     public Guid NewsId { get; set; }
     public News News { get; set; }
 
