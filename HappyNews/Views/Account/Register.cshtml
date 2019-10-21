@@ -1,0 +1,31 @@
+﻿@model HappyNews.ViewsModel.RegisterVM
+
+
+<h2>Register</h2>
+
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Email"></label> <br/>
+        <input asp-for="Email"/>
+        <spam asp-validation-for="Email"></spam>
+    </div>
+    <div>
+        <label asp-for="FullName"></label> <br/>
+        <input asp-for="FullName"/>
+        <spam asp-validation-for="FullName"></spam>
+    </div>
+    <div>
+        <label asp-for="Password"></label> <br/>
+        <input asp-for="Password"/>
+        <spam asp-validation-for="Password"></spam>
+    </div>
+    <div>
+        <label asp-for="ConfirmationPassword"></label> <br/>
+        <input asp-for="ConfirmationPassword"/>
+        <spam asp-validation-for="ConfirmationPassword"></spam>
+    </div>
+    <div>
+        <input type="submit"  value="Register"/>
+    </div>
+</form>

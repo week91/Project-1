@@ -1,0 +1,25 @@
+﻿@model HappyNews.ViewsModel.LoginVM
+
+<h2>Register</h2>
+
+<form method="post" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Email"></label> <br />
+        <input asp-for="Email" />
+        <spam asp-validation-for="Email"></spam>
+    </div>
+
+    <div>
+        <label asp-for="Password"></label> <br />
+        <input asp-for="Password" />
+        <spam asp-validation-for="Password"></spam>
+    </div>
+    <div>
+        <label asp-for="RememberMe"></label> <br />
+        <input asp-for="RememberMe" />
+    </div>
+    <div>
+        <input type="submit" value="Login" />
+    </div>
+</form>

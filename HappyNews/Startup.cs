@@ -4,6 +4,7 @@ using HappyNews.UoW;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -15,22 +16,29 @@ namespace HappyNews
     {
         
         private IConfigurationRoot _conf;
-
+       
         public Startup(IHostingEnvironment host)
         {
-            _conf=new ConfigurationBuilder().SetBasePath(host.ContentRootPath).AddJsonFile("DbConnection.json").Build();
+            _conf =new ConfigurationBuilder().SetBasePath(host.ContentRootPath).AddJsonFile("DbConnection.json").Build();
         }
     
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DbContent>(option=>option.UseSqlServer(_conf.GetConnectionString("DefaultConnection")));
+
+            //services.AddDbContext<ApplicationContext>(option => option.UseSqlServer(_conf.GetConnectionString("DefaultConnection")));
+
             services.AddTransient<IGenericRepository<Admins>, AdminsRepo>();
             services.AddTransient<IGenericRepository<Users>, Usersrepo>();
             services.AddTransient<IGenericRepository<News>,NewsRepo>();
             services.AddTransient<IGenericRepository<Comments>,CommentsRepo>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            services.AddIdentity<User1, IdentityRole>()
+                .AddEntityFrameworkStores<DbContent>();
+
+            services.AddMvc();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -46,13 +54,11 @@ namespace HappyNews
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             using (var scope = app.ApplicationServices.CreateScope()){
-                var content = scope.ServiceProvider.GetRequiredService<DbContent>();
+               var content = scope.ServiceProvider.GetRequiredService<DbContent>();
                
            }
 
-            {
-                
-            }
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -67,7 +73,7 @@ namespace HappyNews
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

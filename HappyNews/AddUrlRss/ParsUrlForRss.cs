@@ -2,20 +2,22 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Threading.Tasks;
 using System.Xml;
 
 namespace HappyNews.Addnews
 {
-    public class add : IAddNews
+    public class ParsUrlForRss
     {
 
-
-        public List<News> AddNews(string url)
+        public List<string> AddUrls(string RssChanelUrl)
         {
-            List<News> newses = new List<News>();
+            
 
-            XmlTextReader xmlTextReader = new XmlTextReader(url);
+            List<string> rssUrls = new List<string>();
+
+            XmlTextReader xmlTextReader = new XmlTextReader(RssChanelUrl);
 
             XmlDocument xmlDoc = new XmlDocument();
 
@@ -35,21 +37,14 @@ namespace HappyNews.Addnews
 
                         if (childnode.Name == "item")
                         {
-                            foreach (XmlNode node1 in childnode.ChildNodes)
+                            foreach (XmlNode node in childnode.ChildNodes)
                             {
-                                if (node1.Name == "link")
+                                if (node.Name == "link")
                                 {
-                                    string sorce = node1.InnerText;
-
-                                    newses.Add(new News
-                                    {
-                                        Source = node1.InnerText,
-                                        DateCreate = DateTime.Now,
-                                        NewsTitle = "jjj",
-                                        BodyNews = "kl;l",
-                                        IndexOfPosition = "7",
-                                        
-                                    });
+                                   
+                                    rssUrls.Add(node.InnerText);
+                                   
+                                    
 
                                 }
 
@@ -64,7 +59,7 @@ namespace HappyNews.Addnews
                 }
                
             }
-            return (newses);
+            return (rssUrls);
         }
     }
 }

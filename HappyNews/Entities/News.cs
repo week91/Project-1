@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using HappyNews.Entities;
+using HtmlAgilityPack;
 
 namespace HappyNews.Models
 {
@@ -12,6 +13,7 @@ namespace HappyNews.Models
         public DateTime DateCreate { get; set; }
         public string BodyNews { get; set; }
         public string IndexOfPosition { get; set; }
+        public string StartPict { get; set; }
         public ICollection<Comments> Comments { get; set; }
 
     }
