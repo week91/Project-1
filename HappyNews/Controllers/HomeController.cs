@@ -7,6 +7,9 @@ using HappyNews.Models;
 using HappyNews.Repo;
 using HappyNews.UoW;
 using HappyNews.ViewsModel;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Authentication;
 using Microsoft.IdentityModel.Tokens.Saml2;
 
 namespace HappyNews.Controllers
@@ -23,32 +26,38 @@ namespace HappyNews.Controllers
 
         public IActionResult index()
         {
-            AddNews news =new AddNews();
-            ParsUrlForRss rss=new ParsUrlForRss();
-            var rssList = rss.AddUrls("http://s13.ru/rss/.rss");
-
+           //AddNews news =new AddNews();
+           //var listNewses= news.AddNewsList("http://s13.ru/rss/.rss");
+           
             
-            
-            var NewsInBase = _unitOfWork.News.GetAll();
-            
-            foreach (var newss in NewsInBase)
+           var NewsInBase = _unitOfWork.News.GetAll();
+           // foreach (News newnews in listNewses)
+           // {
+           //     if (NewsInBase.Count() == 0)
+           //     {
 
-            {
-              bool tt = NewsInBase.All(n => n.Source != newss.Source);
+           //         _unitOfWork.News.Insert(newnews);
+           //     }
+           //     foreach (var t in NewsInBase)
+           //     {
+           //        if (t.Source != newnews.Source)
+           //        {
 
+           //             _unitOfWork.News.Insert(newnews);
+           //        }
+           //   }
 
-               if (tt){
+                    
 
-                   _unitOfWork.News.Insert(newss);
-               }
+                
+           // }
 
-            }
-            _unitOfWork.Save();
+          //_unitOfWork.Save();
            
             
             return View(model: NewsInBase);
         }
-
+    
         public IActionResult Privacy()
         {
            
