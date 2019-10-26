@@ -67,7 +67,8 @@ C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\UserControll
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\UserController1\Index.cshtml.g.cs
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
-C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Controller\Create.cshtml.g.cs
-C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Controller\Delete.cshtml.g.cs
-C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Controller\Edit.cshtml.g.cs
-C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\Controller\Index.cshtml.g.cs
+C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\RoleControllers\Create.cshtml.g.cs
+C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\RoleControllers\Delete.cshtml.g.cs
+C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\RoleControllers\Edit.cshtml.g.cs
+C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\RoleControllers\Index.cshtml.g.cs
+C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\Razor\Views\RoleControllers\UserList.cshtml.g.cs

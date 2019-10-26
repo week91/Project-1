@@ -26,33 +26,31 @@ namespace HappyNews.Controllers
 
         public IActionResult index()
         {
-           //AddNews news =new AddNews();
-           //var listNewses= news.AddNewsList("http://s13.ru/rss/.rss");
+        //   AddNews news =new AddNews();
+         //  var listNewses= news.AddNewsList("http://s13.ru/rss/.rss");
            
             
            var NewsInBase = _unitOfWork.News.GetAll();
-           // foreach (News newnews in listNewses)
-           // {
-           //     if (NewsInBase.Count() == 0)
-           //     {
+       //     foreach (News newnews in listNewses)
+       //    {
+        //       if (NewsInBase.Count() == 0)
+          //     {
 
-           //         _unitOfWork.News.Insert(newnews);
-           //     }
-           //     foreach (var t in NewsInBase)
-           //     {
-           //        if (t.Source != newnews.Source)
-           //        {
-
-           //             _unitOfWork.News.Insert(newnews);
-           //        }
-           //   }
+         //          _unitOfWork.News.Insert(newnews);
+         //       } foreach (var t in NewsInBase)
+          //      {
+           //       if (t.Source != newnews.Source)
+           //       {
+           //           _unitOfWork.News.Insert(newnews);
+           //       }
+          //   }
 
                     
 
                 
-           // }
+          //  }
 
-          //_unitOfWork.Save();
+         // _unitOfWork.Save();
            
             
             return View(model: NewsInBase);

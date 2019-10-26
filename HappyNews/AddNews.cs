@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using HappyNews.Addnews;
 using HappyNews.Models;
@@ -10,13 +12,18 @@ namespace HappyNews.ViewsModel
 {
     public class AddNews
     {
+        
+        
         public List<News> AddNewsList(string RssChanelUrlS)
         {
             ParsUrlForRss Rsss = new ParsUrlForRss();
             List<string> urls = Rsss.AddUrls(RssChanelUrlS);
-
-            
+           
             List<News> News1 = new List<News>();
+
+
+            Regex regex = new Regex(@"&[a-z ]*\;");
+
             foreach (string html in urls)
             {
                 string BodyText = "";
@@ -28,17 +35,21 @@ namespace HappyNews.ViewsModel
                         {
                             if (nodes != null)
                             {
+
                                 BodyText += nodes.InnerText;
 
-                            }
+                    }
 
                         }
 
                         var htmlBody = htmlDoc.DocumentNode.SelectSingleNode("//div/h1");
                 if(htmlBody !=null)
-                        News1.Add(new News
+                   
+                News1.Add(new News
                         {
-                            Source = html, BodyNews = BodyText, DateCreate = DateTime.Now,
+                            Source = html,
+                            BodyNews = regex.Replace(BodyText, " "),
+                            DateCreate = DateTime.Now,
                             NewsTitle = htmlBody.InnerText,
                         }); 
 
