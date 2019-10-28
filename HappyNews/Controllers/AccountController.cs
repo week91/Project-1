@@ -95,7 +95,8 @@ namespace HappyNews.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("index", "Home");
+            return RedirectToAction("Index", "Home");
+             
         }
 
 
@@ -144,7 +145,7 @@ namespace HappyNews.Controllers
 
                 return View(vm);
             }
-            return RedirectToAction("index", "Home");
+            return RedirectToAction("Index", "Home");
         }
 
     }

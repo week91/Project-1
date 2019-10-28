@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using HappyNews.Models;
 using HappyNews.ViewsModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HappyNews.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class RoleControllers:Controller
     {
         RoleManager<IdentityRole> _roleManager;

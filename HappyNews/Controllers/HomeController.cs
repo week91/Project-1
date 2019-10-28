@@ -1,16 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Diagnostics;
 using System.Linq;
-using HappyNews.Addnews;
 using Microsoft.AspNetCore.Mvc;
 using HappyNews.Models;
-using HappyNews.Repo;
 using HappyNews.UoW;
 using HappyNews.ViewsModel;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Authentication;
-using Microsoft.IdentityModel.Tokens.Saml2;
+using HtmlAgilityPack;
+
 
 namespace HappyNews.Controllers
 {
@@ -23,44 +19,68 @@ namespace HappyNews.Controllers
            _unitOfWork =uow;
         
         }
-
+        
         public IActionResult index()
         {
-        //   AddNews news =new AddNews();
-         //  var listNewses= news.AddNewsList("http://s13.ru/rss/.rss");
-           
-            
-           var NewsInBase = _unitOfWork.News.GetAll();
-       //     foreach (News newnews in listNewses)
-       //    {
-        //       if (NewsInBase.Count() == 0)
-          //     {
-
-         //          _unitOfWork.News.Insert(newnews);
-         //       } foreach (var t in NewsInBase)
-          //      {
-           //       if (t.Source != newnews.Source)
-           //       {
-           //           _unitOfWork.News.Insert(newnews);
-           //       }
-          //   }
-
-                    
-
-                
-          //  }
-
-         // _unitOfWork.Save();
-           
-            
-            return View(model: NewsInBase);
+            var NewsInBase = _unitOfWork.News.GetAll();
+           return View(model: NewsInBase);
         }
-    
+
+        public IActionResult News(Guid N)
+        {
+            News News1=null;
+            var NewsInBase = _unitOfWork.News.GetAll();
+            foreach (var news in NewsInBase)
+            {
+                if (news.id == N)
+                {
+                    News1 = news;
+                }
+            }
+
+            return View(News1);
+        }
+
         public IActionResult Privacy()
         {
            
-           
             return View();
+        }
+        public IActionResult AddNews()
+        {
+
+            return View();
+            
+        }
+        
+        public IActionResult AddNewsInBase(string Rss)
+        {
+            AddNews news =new AddNews();
+
+            var listNewses = news.AddNewsList(Rss);
+
+            var NewsInBase = _unitOfWork.News.GetAll();
+
+                foreach (News newnews in listNewses)
+            {
+                if (NewsInBase.Count() == 0)
+                {
+                    _unitOfWork.News.Insert(newnews);
+                }
+                foreach (News newNews in NewsInBase)
+                {
+                      if (newNews.Source != newnews.Source)
+                      {
+                           _unitOfWork.News.Insert(newnews);
+                      }
+
+                }
+
+            }
+
+            _unitOfWork.Save();
+
+            return RedirectToAction("AddNews","Home");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

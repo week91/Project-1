@@ -4,22 +4,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-
-
-    <div class="jumbotron">
-    <div class="p-3 mb-2 bg-info text-white"> <div class="container">
-        
-        <h1 class="display-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Welcome!</font></font></h1>
-        <h3><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fresh news. </font><font style="vertical-align: inherit;">Happy news of world!!!!! </font><font style="vertical-align: inherit;">Only happy ,only smile!!!</font></font></p></h3>
-        </div>
-    </div>
-        @if (User.Identity.IsAuthenticated)
+ @if (User.Identity.IsAuthenticated)
         {
-            <p>Hi,@User.Identity.Name</p>
+            <p>Hi,@User.Identity.Name <form  asp-controller="Account" asp-action="Logout"> 
+                    <input class="btn btn-info btn-sm" type="submit"  value="Logout"/>
+                </form></p>
 
-            <form method="post" asp-controller="Account" asp-action="Logout"> 
-                <input type="submit"  value="Logout"/>
-            </form>
         }
         else
         {
@@ -27,22 +17,35 @@
             <a asp-controller="Account" asp-action="Register">Register</a>
 
         }
-        <form method="post" asp-controller="Home" asp-action="index"> 
-            <input type="submit"  value="Add_News"/>
-        </form>
+
+    <div class="jumbotron">
+    <div class=" p-3 mb-2 bg-info text-white"> <div class="container">
+        
+        <h1 class="display-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Welcome!</font></font></h1>
+        <h3><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fresh news. </font><font style="vertical-align: inherit;">Happy news of world!!!!! </font><font style="vertical-align: inherit;">Only happy ,only smile!!!</font></font></p></h3>
+        </div>
+    </div>
+       
+        
     <div class="container">
         <div class="row">
-            @foreach (var news in Model)
+           
+            @foreach (var news in Model.Reverse())
             {
-                 <div class="col-md-4">
-                     <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@news.NewsTitle</font></font></h3>
-                     <p><img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22779%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20779%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d4b485bdc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A39pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d4b485bdc%22%3E%3Crect%20width%3D%22779%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22289.734375%22%20y%3D%22107.4%22%3E779x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;"></p>
-                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><h5>@news.BodyNews.</h5>
-                        <p></font><font style="vertical-align: inherit;">@news.DateCreate </font><font style="vertical-align: inherit;">@news.Source</font>
+                <div class="col-md-4">
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@news.NewsTitle</font></font></h3>
+                    <p><img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22779%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20779%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d4b485bdc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A39pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d4b485bdc%22%3E%3Crect%20width%3D%22779%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22289.734375%22%20y%3D%22107.4%22%3E779x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;"></p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">@news.BodyNews.Substring(0,180)
+                                <p></font><font style="vertical-align: inherit;">@news.DateCreate </font><font style="vertical-align: inherit;"></font>
                         </font></p>
-                    <p><a class="btn btn-secondary" href="#" role="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Посмотреть детали "</font></font></a></p>
+                    <p>
+                        <form asp-controller="Home" asp-action="News" asp-route-N=@news.id>
+                            <input class="btn btn-info " type="submit" value="Views details"/>
+                        </form></p>
                 </div>
-             }  
+            }
         </div>
     </div></div>
 

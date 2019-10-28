@@ -14,7 +14,6 @@ namespace HappyNews.Addnews
         public List<string> AddUrls(string RssChanelUrl)
         {
             
-
             List<string> rssUrls = new List<string>();
 
             XmlTextReader xmlTextReader = new XmlTextReader(RssChanelUrl);
@@ -41,9 +40,7 @@ namespace HappyNews.Addnews
                             {
                                 if (node.Name == "link")
                                 {
-                                   
-                                    rssUrls.Add(node.InnerText);
-                                   
+                                   rssUrls.Add(node.InnerText);
                                     
 
                                 }
