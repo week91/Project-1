@@ -4,6 +4,7 @@
     ViewData["Title"] = "Home Page";
 }
 
+        
  @if (User.Identity.IsAuthenticated)
         {
             <p>Hi,@User.Identity.Name <form  asp-controller="Account" asp-action="Logout"> 
