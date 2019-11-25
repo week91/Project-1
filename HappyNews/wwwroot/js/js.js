@@ -18,11 +18,8 @@ $("#comment_add").click(function () {
             let ptext = rr.CommentText;
             user= rr.Userid;
 
-            $('#commentdiv').after('<p>${user}</p>');
-            $('#commentdiv').after('<p>${ptext}</p>');
-          
-            
-            
+            $('#commentdiv').after('<p>' +ptext+ '</p>');
+        
             clearForm();
         },
         error: function () {

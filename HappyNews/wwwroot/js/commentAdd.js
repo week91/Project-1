@@ -12,16 +12,11 @@ function commentsAdd() {
         success: function (m1) {
             alert(m1);
             let rr = JSON.parse(m1);
-            for (let i = 0; i < rr.length; i++)
-            {
-                pp = rr[i].CommentText
-                ppp=rr[i].
+            for (let i = 0; i < rr.length; i++) {
+                pp = rr[i].CommentText;
+                ppp = rr[i].Userid;
 
-                $('#commentdiv').after(`<div class="card-body">
-    <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">${ppp}</font></font></h5>
-    <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">${pp}</font></font></p>
-    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font>
-  </div>`);
+                    $('#commentdiv').after("<p><b>" + pp + "</b><br />" + ppp + "</p>");
             }
             
         },
