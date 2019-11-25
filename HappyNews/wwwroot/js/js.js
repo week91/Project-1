@@ -13,12 +13,10 @@ $("#comment_add").click(function () {
         method: 'GET',
         dataType:'Json',
         data: { data: JSON.stringify(comment)}, 
-        success: function (Comm) {
-             let rr = JSON.parse(Comm);
-            let ptext = rr.CommentText;
-            user= rr.Userid;
-
-            $('#commentdiv').after('<p>' +ptext+ '</p>');
+        success: function (data) {
+            let com = JSON.parse(data);
+            
+            $('#commentdiv').after("<p class=shadow-sm p-3 mb-5 bg-white rounded ><b>" + com.Userid + "</b><br />" + com.CommentText + "</p>");
         
             clearForm();
         },

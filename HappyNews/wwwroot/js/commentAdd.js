@@ -9,14 +9,12 @@ function commentsAdd() {
         method: 'GET',
         dataType: 'Json',
         data: { data: JSON.stringify(data) },
-        success: function (m1) {
-            alert(m1);
-            let rr = JSON.parse(m1);
-            for (let i = 0; i < rr.length; i++) {
-                pp = rr[i].CommentText;
-                ppp = rr[i].Userid;
-
-                    $('#commentdiv').after("<p><b>" + pp + "</b><br />" + ppp + "</p>");
+        success: function (coment) {
+            
+            let comment = JSON.parse(coment);
+            for (let i = 0; i < comment.length; i++) {
+                 
+                $('#commentdiv').after("<p class=shadow-sm p-3 mb-5 bg-white rounded ><b>" + comment[i].Userid + "</b><br />" + comment[i].CommentText + "</p>");
             }
             
         },
