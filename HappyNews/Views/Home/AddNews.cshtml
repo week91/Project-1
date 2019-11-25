@@ -8,7 +8,7 @@
         <header><h1>Choose a Newses site</h1></header>
 
         <p>
-            <form asp-action="AddNewsInBase" asp-route-Rss="http://s13.ru/rss/.rss" method="post">
+            <form asp-action="AddNewsInBase" asp-route-Rss="http://s13.ru/rss/.rss" method="post">  
                 <button type="submit" class="btn btn-sm btn-danger">
                     Add News S13.ru
                 </button>
@@ -17,17 +17,12 @@
         </p>
 
         <p>
-            <form asp-action="AddNewsInBase" asp-route-Rss="https://www.onliner.by/feed.rss" method="post">
+            
+            <form asp-action="AddNewsInBase" asp-route-Rss="https://news.tut.by/rss/society.rss" method="post">
                 <button type="submit" class="btn btn-sm btn-danger">
-                    Add News Onliner.by
+                    Add News Tut.by
                 </button>
             </form>
-        </p>
 
-        <p>  <form asp-action="AddNewsInBase" asp-route-Rss="https://news.tut.by/rss/society.rss" method="post">
-            <button type="submit" class="btn btn-sm btn-danger">
-                Add News Tut.by
-            </button>
-        </form>
-        </p>
+            </p>
     </div>

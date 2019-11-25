@@ -7,7 +7,6 @@ namespace HappyNews.Models
 {
     public class News: DbEntities
     {
-        public Guid IdNews { get; set; }
         public string NewsTitle { get; set; }
         public string Source { get; set; }
         public DateTime DateCreate { get; set; }

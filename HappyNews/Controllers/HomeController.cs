@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
@@ -6,7 +8,7 @@ using HappyNews.Models;
 using HappyNews.UoW;
 using HappyNews.ViewsModel;
 using HtmlAgilityPack;
-
+using Newtonsoft.Json;
 
 namespace HappyNews.Controllers
 {
@@ -19,26 +21,58 @@ namespace HappyNews.Controllers
            _unitOfWork =uow;
         
         }
-        
+
+      
+        [HttpGet]
+
+          public JsonResult Comment( string data)  //get data for  new comments 
+        { 
+            Comments NewComment = JsonConvert.DeserializeObject<Comments>(data);
+
+            
+
+            _unitOfWork.Comments.Insert(NewComment);
+            _unitOfWork.Save();
+                 
+             
+            return Json(data);
+
+
+        }
+          [HttpGet]
+          public JsonResult commentAdd(string data)
+          {
+              string id = JsonConvert.DeserializeObject<string>(data);
+             var comm= _unitOfWork.Comments.GetAll();
+             List<Comments> listt = new List<Comments>();
+            foreach (var  coment in comm)
+             {
+                 if (coment.NewsId.ToString()==id)
+                 {
+                     listt.Add(coment);
+                }
+                
+             }
+            
+            string comment = JsonConvert.SerializeObject(listt, Formatting.Indented);
+            return Json(comment);
+
+        }
+
+
         public IActionResult index()
         {
             var NewsInBase = _unitOfWork.News.GetAll();
            return View(model: NewsInBase);
         }
 
-        public IActionResult News(Guid N)
+        public IActionResult News(Guid ID)
         {
-            News News1=null;
-            var NewsInBase = _unitOfWork.News.GetAll();
-            foreach (var news in NewsInBase)
-            {
-                if (news.id == N)
-                {
-                    News1 = news;
-                }
-            }
+            
+            var NewsInBase = _unitOfWork.News.GetById(ID);
+           
+            return View(NewsInBase);
 
-            return View(News1);
         }
 
         public IActionResult Privacy()
@@ -80,7 +114,7 @@ namespace HappyNews.Controllers
 
             _unitOfWork.Save();
 
-            return RedirectToAction("AddNews","Home");
+            return RedirectToAction("Index","Home");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

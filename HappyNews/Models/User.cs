@@ -10,7 +10,6 @@ namespace HappyNews.Models
 
     {
     public string FullName { get; set; }
-    public ICollection<Comments> UserComments { get; set; }
-
+    
     }
 }

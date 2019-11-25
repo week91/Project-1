@@ -1,10 +1,39 @@
 ﻿@model HappyNews.Models.News
-   
 
-<header><h2>@Model.NewsTitle</h2></header>
+
+<div>
+    <h2>@Model.NewsTitle</h2>
+</div>
+
 <div>
     <p>@Model.BodyNews</p>
     <p>@Model.DateCreate</p>
 
 </div>
 
+
+@if (@User.Identity.IsAuthenticated)
+{
+    <div id="commetsarea">
+        <div class="form-group">
+            <label for="comment-name">Comment for @User.Identity.Name</label>
+            <textarea class="form-control" id="comment-body" rows="3" placeholder="write comment"></textarea>
+            <div style="display: none" id="my-div" data-newsid=@Model.id data-userid=@User.Identity.Name> DataForComments</div>
+        </div>
+        <button type="submit" id="comment_add" class="btn btn-primary">Add comment</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="\js\js.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+}
+
+<div style="display: none" id="my-div1" data-newsid=@Model.id data-usersid=@User.Identity.Name>DataForComments</div>
+<div id="commentdiv">
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="\js\commentAdd.js"></script>

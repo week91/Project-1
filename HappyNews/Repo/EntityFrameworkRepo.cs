@@ -26,10 +26,10 @@ namespace HappyNews.Repo
             return _table.ToList();
         }
 
-        public T GetById(object id)
-        {
-            return _table.Find(id);
-        }
+      //  public T GetById(object id)
+      //  {
+      //      return _table.Find(id);
+      //  }
 
         public void Insert(T obj)
         {
@@ -51,6 +51,11 @@ namespace HappyNews.Repo
         public IQueryable<T> AsQueryable()
         {
             return _table.AsQueryable();
+        }
+
+        public T GetById(Guid id)
+        {
+            return _table.Find(id);
         }
     }
 }
