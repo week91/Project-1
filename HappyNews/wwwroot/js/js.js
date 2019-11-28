@@ -1,5 +1,8 @@
 $("#comment_add").click(function () {
-
+   
+        
+    
+    
     var myDiv = document.querySelector('#my-div');
 
     let comment = {

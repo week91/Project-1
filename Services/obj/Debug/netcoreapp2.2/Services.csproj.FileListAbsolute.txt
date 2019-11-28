@@ -1,0 +1,11 @@
+C:\repohome\Project-1\Services\bin\Debug\netcoreapp2.2\Services.deps.json
+C:\repohome\Project-1\Services\bin\Debug\netcoreapp2.2\Services.dll
+C:\repohome\Project-1\Services\bin\Debug\netcoreapp2.2\Services.pdb
+C:\repohome\Project-1\Services\obj\Debug\netcoreapp2.2\Services.csprojAssemblyReference.cache
+C:\repohome\Project-1\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfoInputs.cache
+C:\repohome\Project-1\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfo.cs
+C:\repohome\Project-1\Services\obj\Debug\netcoreapp2.2\Services.csproj.CopyComplete
+C:\repohome\Project-1\Services\obj\Debug\netcoreapp2.2\Services.dll
+C:\repohome\Project-1\Services\obj\Debug\netcoreapp2.2\Services.pdb
+C:\repohome\Project-1\Services\bin\Debug\netcoreapp2.2\Data.dll
+C:\repohome\Project-1\Services\bin\Debug\netcoreapp2.2\Data.pdb

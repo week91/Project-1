@@ -1,0 +1,13 @@
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\appsettings.json
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\NewsApi.deps.json
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\NewsApi.runtimeconfig.json
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\NewsApi.runtimeconfig.dev.json
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\NewsApi.dll
+C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.csprojAssemblyReference.cache
+C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.RazorAssemblyInfo.cache
+C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.RazorAssemblyInfo.cs
+C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.AssemblyInfoInputs.cache
+C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.AssemblyInfo.cs
+C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.RazorTargetAssemblyInfo.cache

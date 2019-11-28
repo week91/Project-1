@@ -18,18 +18,13 @@ using HappyNews;
 
 #line default
 #line hidden
-#line 2 "C:\repohome\Project-1\HappyNews\Views\_ViewImports.cshtml"
-using HappyNews.Models;
-
-#line default
-#line hidden
 #line 2 "C:\repohome\Project-1\HappyNews\Views\Home\AddNews.cshtml"
 using Microsoft.EntityFrameworkCore;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0a9fabae83f2e9a71adf2545cc2b4e9693588f8c", @"/Views/Home/AddNews.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"41aa3214b90172bb2053ea3384bc726a32f38ea4", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4c0b6ddb1e005df4c77c8613fde376bb86756545", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_AddNews : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<string>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "AddNewsInBase", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -66,7 +61,7 @@ using Microsoft.EntityFrameworkCore;
             WriteLiteral("    <div>\n        <header><h1>Choose a Newses site</h1></header>\n\n        <p>\n            ");
             EndContext();
             BeginContext(148, 240, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a9fabae83f2e9a71adf2545cc2b4e9693588f8c4847", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a9fabae83f2e9a71adf2545cc2b4e9693588f8c4722", async() => {
                 BeginContext(234, 147, true);
                 WriteLiteral("  \n                <button type=\"submit\" class=\"btn btn-sm btn-danger\">\n                    Add News S13.ru\n                </button>\n\n            ");
                 EndContext();
@@ -98,7 +93,7 @@ using Microsoft.EntityFrameworkCore;
             WriteLiteral("\n        </p>\n\n        <p>\n            \n            ");
             EndContext();
             BeginContext(440, 250, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a9fabae83f2e9a71adf2545cc2b4e9693588f8c7407", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a9fabae83f2e9a71adf2545cc2b4e9693588f8c7282", async() => {
                 BeginContext(539, 144, true);
                 WriteLiteral("\n                <button type=\"submit\" class=\"btn btn-sm btn-danger\">\n                    Add News Tut.by\n                </button>\n            ");
                 EndContext();

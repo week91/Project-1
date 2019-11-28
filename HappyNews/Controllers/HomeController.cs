@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Core.Models;
+using Data.UoW;
+using HappyNews.Entities;
 using Microsoft.AspNetCore.Mvc;
-using HappyNews.Models;
-using HappyNews.UoW;
-using HappyNews.ViewsModel;
-using HtmlAgilityPack;
 using Newtonsoft.Json;
+using Services;
 
 namespace HappyNews.Controllers
 {

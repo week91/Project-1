@@ -18,13 +18,8 @@ using HappyNews;
 
 #line default
 #line hidden
-#line 2 "C:\repohome\Project-1\HappyNews\Views\_ViewImports.cshtml"
-using HappyNews.Models;
-
-#line default
-#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3df9cfb84394d1b4122580844b633f606af08288", @"/Views/RoleControllers/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"41aa3214b90172bb2053ea3384bc726a32f38ea4", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4c0b6ddb1e005df4c77c8613fde376bb86756545", @"/Views/_ViewImports.cshtml")]
     public class Views_RoleControllers_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Delete", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -78,7 +73,7 @@ using HappyNews.Models;
             WriteLiteral("</td>\n            <td>\n                ");
             EndContext();
             BeginContext(225, 223, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3df9cfb84394d1b4122580844b633f606af082885381", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3df9cfb84394d1b4122580844b633f606af082885256", async() => {
                 BeginContext(289, 152, true);
                 WriteLiteral("\n                    <button type=\"submit\" class=\"btn btn-sm btn-danger\">\n                        Удалить\n                    </button>\n                ");
                 EndContext();
@@ -125,7 +120,7 @@ using HappyNews.Models;
             WriteLiteral("</table>\n");
             EndContext();
             BeginContext(496, 40, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3df9cfb84394d1b4122580844b633f606af082888582", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3df9cfb84394d1b4122580844b633f606af082888457", async() => {
                 BeginContext(519, 13, true);
                 WriteLiteral("Добавить роль");
                 EndContext();
@@ -147,7 +142,7 @@ using HappyNews.Models;
             WriteLiteral("\n");
             EndContext();
             BeginContext(537, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3df9cfb84394d1b4122580844b633f606af082889957", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3df9cfb84394d1b4122580844b633f606af082889832", async() => {
                 BeginContext(562, 20, true);
                 WriteLiteral("Список пользователей");
                 EndContext();

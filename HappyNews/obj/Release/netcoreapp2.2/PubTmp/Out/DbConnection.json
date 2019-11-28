@@ -1,5 +1,0 @@
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=DESKTOP-4A8SA4H;Database=275;Integrated Security=SSPI;MultipleActiveResultSets=true"
-  }
-}
