@@ -11,3 +11,10 @@ C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.RazorAssemblyInfo.
 C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.AssemblyInfoInputs.cache
 C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.AssemblyInfo.cs
 C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.RazorTargetAssemblyInfo.cache
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\DbConnection.json
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\NewsApi.pdb
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\Data.dll
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\Data.pdb
+C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.csproj.CopyComplete
+C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.dll
+C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.pdb

@@ -39,7 +39,7 @@ namespace HappyNews.Controllers
 
         }
           [HttpGet]
-          public JsonResult commentAdd(string data)
+          public JsonResult CommentAdd(string data)
           {
               string id = JsonConvert.DeserializeObject<string>(data);
              var comm= _unitOfWork.Comments.GetAll();
@@ -59,7 +59,7 @@ namespace HappyNews.Controllers
         }
 
 
-        public IActionResult index()
+        public IActionResult Index()
         {
             var NewsInBase = _unitOfWork.News.GetAll();
            return View(model: NewsInBase);

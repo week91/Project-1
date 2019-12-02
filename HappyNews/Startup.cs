@@ -17,7 +17,7 @@ namespace HappyNews
     public class Startup
     {
         
-        private IConfigurationRoot _conf;
+        private readonly IConfigurationRoot _conf;
        
         public Startup(IHostingEnvironment host)
         {

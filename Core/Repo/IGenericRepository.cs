@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using HappyNews.Entities;
 
 namespace Core.Repo
 {
@@ -11,7 +12,6 @@ namespace Core.Repo
         void Insert(T obj);
         void Update(T obj);
         void Delete(object id);
-
-        IQueryable<T> AsQueryable();
+        
     }
 }

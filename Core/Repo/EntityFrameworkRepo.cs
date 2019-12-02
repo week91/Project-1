@@ -25,12 +25,7 @@ namespace Core.Repo
             return _table.ToList();
         }
 
-      //  public T GetById(object id)
-      //  {
-      //      return _table.Find(id);
-      //  }
-
-        public void Insert(T obj)
+       public void Insert(T obj)
         {
             _table.Add(obj);
         }
@@ -56,6 +51,7 @@ namespace Core.Repo
         {
             return _table.Find(id);
         }
+        
     }
 }
 

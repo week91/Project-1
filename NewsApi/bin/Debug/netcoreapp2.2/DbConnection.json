@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=DESKTOP-4A8SA4H;Database=jwttoken;Integrated Security=SSPI;MultipleActiveResultSets=true"
+  }
+}
