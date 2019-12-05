@@ -3,7 +3,7 @@ using Core;
 using Core.Repo;
 using HappyNews.Entities;
 
-namespace Data.UoW
+namespace Services.UoW
 {
     public class UnitOfWork : IUnitOfWork
     {
@@ -14,20 +14,20 @@ namespace Data.UoW
         private readonly IGenericRepository<Comments> _commentsRepository;
 
 
-        public UnitOfWork(DbContent context, IGenericRepository<News> news,IGenericRepository<Comments> comments)
+        public UnitOfWork(DbContent context, IGenericRepository<News> news, IGenericRepository<Comments> comments)
         {
             _context = context;
-           _newsRepository = news;
+            _newsRepository = news;
             _commentsRepository = comments;
 
         }
 
-      
+
         public IGenericRepository<News> News => _newsRepository;
 
         public IGenericRepository<Comments> Comments => _commentsRepository;
-        
-        
+
+
         private bool disposed = false;
 
         public virtual void Dispose(bool disposing)

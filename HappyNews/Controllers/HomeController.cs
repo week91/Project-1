@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Core.Models;
-using Data.UoW;
 using HappyNews.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Services;
+using Services.UoW;
 
 namespace HappyNews.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        
+
         public HomeController(IUnitOfWork uow)
         {
            _unitOfWork =uow;

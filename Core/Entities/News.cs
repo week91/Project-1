@@ -5,6 +5,7 @@ namespace HappyNews.Entities
 {
     public class News: DbEntities
     {
+   
         public string NewsTitle { get; set; }
         public string Source { get; set; }
         public DateTime DateCreate { get; set; }

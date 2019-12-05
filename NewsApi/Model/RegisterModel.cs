@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 
-namespace NewsApi
+namespace NewsApi.Model
 {
-    public class LoginModel
+    public class RegisterModel
     {
-        [Required(ErrorMessage = "Uername is required.")]
+        [Required]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Password is required.")]
+
+        [Required]
+        [StringLength(100, ErrorMessage = " PASSWORD_MIN_LENGTH 6", MinimumLength = 6)]
         public string Password { get; set; }
     }
 }
