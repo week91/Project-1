@@ -7,20 +7,21 @@ using HappyNews.Entities;
 using MediatR;
 using NewsApi.MediatR.Queries;
 using NewsApi.MediatR.Repositories;
+using Services.UoW;
 
 namespace NewsApi.MediatR.Handlers
 {
     public class GetNewsHandler : IRequestHandler<GetNewsQuery, News>
     {
-        private readonly IGenericApiRepository<News> _newsdata;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public GetNewsHandler(IGenericApiRepository<News> newsdata)
+        public GetNewsHandler(IUnitOfWork _unitOfWork)
         {
-            this._newsdata = newsdata;
+            this._unitOfWork = _unitOfWork;
         }
         public Task<News> Handle(GetNewsQuery request, CancellationToken cancellationToken)
         {
-            var result = _newsdata.GetById((request.Id));
+            var result = _unitOfWork.News.GetById((request.Id));
             return Task.FromResult(result);
         }
     }

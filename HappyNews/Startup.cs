@@ -1,6 +1,6 @@
 ﻿using Core;
-using Core.Models;
 using Core.Repo;
+using Data.Models;
 using HappyNews.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

@@ -1,12 +1,13 @@
 ﻿using System;
 using Core.Repo;
 using HappyNews.Entities;
+using NewsApi.MediatR.Repositories;
 
 namespace Services.UoW
 {
     public interface IUnitOfWork : IDisposable
     {
-        IGenericRepository<News> News { get; }
+        IGenericApiRepository<News> News { get; }
         IGenericRepository<Comments> Comments { get; }
         void Save();
     }

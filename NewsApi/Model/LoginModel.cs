@@ -9,7 +9,7 @@ namespace NewsApi
 {
     public class LoginModel
     {
-        [Required(ErrorMessage = "Uername is required.")]
+        [Required(ErrorMessage = "Username is required.")]
         public string Email { get; set; }
         [Required(ErrorMessage = "Password is required.")]
         public string Password { get; set; }

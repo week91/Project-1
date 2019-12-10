@@ -86,11 +86,11 @@ namespace HappyNews.Controllers
             
         }
         
-        public IActionResult AddNewsInBase(string Rss)
+        public IActionResult AddNewsInBase()
         {
             AddNews news =new AddNews();
-
-            var listNewses = news.AddNewsList(Rss);
+            List<string> rss=new List<string>();
+            var listNewses = news.AddNewsList( rss);
 
             var NewsInBase = _unitOfWork.News.GetAll();
 
@@ -98,13 +98,13 @@ namespace HappyNews.Controllers
             {
                 if (NewsInBase.Count() == 0)
                 {
-                    _unitOfWork.News.Insert(newnews);
+                    _unitOfWork.News.Create(newnews);
                 }
                 foreach (News newNews in NewsInBase)
                 {
                       if (newNews.Source != newnews.Source)
                       {
-                           _unitOfWork.News.Insert(newnews);
+                           _unitOfWork.News.Create(newnews);
                       }
 
                 }

@@ -2,6 +2,7 @@
 using Core;
 using Core.Repo;
 using HappyNews.Entities;
+using NewsApi.MediatR.Repositories;
 
 namespace Services.UoW
 {
@@ -9,12 +10,12 @@ namespace Services.UoW
     {
         private readonly DbContent _context;
 
-        private readonly IGenericRepository<News> _newsRepository;
+        private readonly IGenericApiRepository<News> _newsRepository;
 
         private readonly IGenericRepository<Comments> _commentsRepository;
 
 
-        public UnitOfWork(DbContent context, IGenericRepository<News> news, IGenericRepository<Comments> comments)
+        public UnitOfWork(DbContent context, IGenericApiRepository<News> news, IGenericRepository<Comments> comments)
         {
             _context = context;
             _newsRepository = news;
@@ -23,7 +24,7 @@ namespace Services.UoW
         }
 
 
-        public IGenericRepository<News> News => _newsRepository;
+        public IGenericApiRepository<News> News => _newsRepository;
 
         public IGenericRepository<Comments> Comments => _commentsRepository;
 

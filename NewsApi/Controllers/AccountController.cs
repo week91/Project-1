@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -15,7 +13,7 @@ using NewsApi.Model;
 
 namespace NewsApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]/[action]")]
     [ApiController]
     public class AccountController : ControllerBase
     {
@@ -44,8 +42,8 @@ namespace NewsApi.Controllers
                 var appUser = _userManager.Users.SingleOrDefault(r => r.Email == model.Email);
                 return await GenerateJwtToken(model.Email, appUser);
             }
-
-            throw new ApplicationException("INVALID_LOGIN_ATTEMPT");
+            
+            throw new  Exception("INVALID_LOGIN_ATTEMPT");
         }
 
         [HttpPost]

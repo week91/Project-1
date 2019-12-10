@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Core.Models;
+using Data.Models;
 using HappyNews.ViewsModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

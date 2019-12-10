@@ -1,11 +1,6 @@
-﻿using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Reflection;
-using System.Text;
-using Core;
+﻿using Core;
 using Core.Models;
 using Core.Repo;
-
 using Hangfire;
 using HappyNews.Entities;
 using MediatR;
@@ -18,23 +13,27 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using NewsApi.MediatR;
 using NewsApi.MediatR.Repositories;
+using NewsCreated.Hangfire;
+using Services.UoW;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Data;
 
 namespace NewsApi
 {
     public class Startup
     {
         private readonly IConfigurationRoot _conf;
-
-      
     
-
-       public Startup(IHostingEnvironment host, IConfiguration configuration)
+    public Startup(IHostingEnvironment host, IConfiguration configuration)
        {
            _conf = new ConfigurationBuilder().SetBasePath(host.ContentRootPath).AddJsonFile("DbConnection.json").Build();
            Configuration = configuration;
-            }
+           
+         
+       }
 
      
         public IConfiguration Configuration { get; }
@@ -43,12 +42,12 @@ namespace NewsApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DbContent>(option => option.UseSqlServer(_conf.GetConnectionString("DefaultConnection")));
-            services.AddTransient<IGenericRepository<News>, NewsRepo>();
             services.AddTransient<IGenericRepository<Comments>, CommentsRepo>();
             services.AddMediatR(typeof(Startup));
-            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<DbContent>().AddDefaultTokenProviders();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<DbContent>().AddDefaultTokenProviders();
             services.AddHangfire(Configuration => Configuration.UseSqlServerStorage(_conf.GetConnectionString("DefaultConnection")));
-            
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IHangfireNews, HangfireNews>();
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear(); // => remove default claims
             services
                 .AddAuthentication(options =>
@@ -71,12 +70,15 @@ namespace NewsApi
                     };
                 });
             services.AddScoped<IGenericApiRepository<News>, NewsRepository>();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+           
+           services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IUnitOfWork _unitOfWork)
         {
+           
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -89,8 +91,11 @@ namespace NewsApi
          
             app.UseHangfireServer();
             app.UseHangfireDashboard();
-            app.UseHttpsRedirection();
-            app.UseAuthentication();
+           RecurringJob.AddOrUpdate( () => new HangfireNews(_unitOfWork).TaskNewsAddStart(), Cron.Minutely);
+         // RecurringJob.AddOrUpdate(()=> new  HangfireNews().TaskNewsAddStart(),Cron.Minutely()); 
+ 
+
+             app.UseAuthentication();
             app.UseMvc();
         }
     }

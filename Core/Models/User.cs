@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Core.Models
+namespace Data.Models
 {
-    public class User:IdentityUser
+    public class User : IdentityUser
 
     {
-    public string FullName { get; set; }
-    
+        public string FullName { get; set; }
+
     }
 }

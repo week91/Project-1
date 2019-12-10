@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"

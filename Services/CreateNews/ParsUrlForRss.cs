@@ -1,14 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Xml;
+using Services.CreateNews;
 
 namespace Services.AddUrlRss
 {
-    public class ParsUrlForRss
+    public class ParsUrlForRss : IParsUrlForRss
     {
 
-        public List<string> AddUrls(string RssChanelUrl) //parse rrs chanel
+        public List<string> AddUrls() //parse rrs chanel
         {
-            
+            string RssChanelUrl = "http://s13.ru/rss/.rss";
+
+
             List<string> rssUrls = new List<string>();
 
             XmlTextReader xmlTextReader = new XmlTextReader(RssChanelUrl);

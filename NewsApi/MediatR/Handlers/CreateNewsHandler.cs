@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
 using System.Threading.Tasks;
 using Core;
@@ -8,20 +9,24 @@ using HappyNews.Entities;
 using MediatR;
 using NewsApi.MediatR.Commands;
 using NewsApi.MediatR.Repositories;
+using Services.UoW;
 
 namespace NewsApi.MediatR.Handlers
 {
     public class CreateNewsHandler : IRequestHandler<CreateNewsCommand, Guid>
     {
-        private readonly IGenericApiRepository<News> _newsdata;
+        private readonly IUnitOfWork _newsRepository;
 
-        public CreateNewsHandler(IGenericApiRepository<News> newsdata)
+        public CreateNewsHandler(IUnitOfWork  newsdata)
         {
-            this._newsdata = newsdata;
+            this._newsRepository = newsdata;
         }
-        public Task<Guid> Handle(CreateNewsCommand request, CancellationToken cancellationToken)
+        public Task<Guid>Handle(CreateNewsCommand request, CancellationToken cancellationToken)
         {
-            var id = _newsdata.Create(request.News);
+            var id = _newsRepository.News.Create(request.News);
+
+            _newsRepository.Save();
+
             return Task.FromResult(id);
         }
     }

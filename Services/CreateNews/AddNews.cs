@@ -4,17 +4,16 @@ using System.Text.RegularExpressions;
 using HappyNews.Entities;
 using HtmlAgilityPack;
 using Services.AddUrlRss;
+using Services.CreateNews;
 
 namespace Services
 {
-    public class AddNews
+    public class AddNews:IAddNews
     {
 
 
-        public List<News> AddNewsList(string RssChanelUrlS)// pars news 
+        public List<News> AddNewsList(List<string> urls)// pars and create news 
         {
-            ParsUrlForRss Rsss = new ParsUrlForRss();
-            List<string> urls = Rsss.AddUrls(RssChanelUrlS);
 
             List<News> News1 = new List<News>();
 
@@ -55,6 +54,7 @@ namespace Services
                             BodyNews = regex.Replace(BodyText, " "),
                             DateCreate = DateTime.Now,
                             NewsTitle = htmlBody.InnerText,
+                            id = Guid.NewGuid()
                         });
 
                 }

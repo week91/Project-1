@@ -23,6 +23,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core\Data.csproj" />
+    <ProjectReference Include="..\NewsCreated\NewsCreated.csproj" />
+    <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>
 
 </Project>
