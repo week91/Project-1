@@ -47,5 +47,8 @@ C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\Services.dll
 C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\Services.pdb
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\HappyNews.Views.pdb
 C:\repohome\Project-1\HappyNews\obj\Debug\netcoreapp2.2\HappyNews.csproj.CopyComplete
-C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\Data.dll
-C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\Data.pdb
+C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\.filenesting.json
+C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\CoreApp.dll
+C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\Model1.dll
+C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\CoreApp.pdb
+C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\Model1.pdb

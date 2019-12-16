@@ -1,0 +1,15 @@
+C:\repohome\Project-1\Mediatr\obj\Debug\netcoreapp2.2\Mediatr.csprojAssemblyReference.cache
+C:\repohome\Project-1\Mediatr\obj\Debug\netcoreapp2.2\Mediatr.AssemblyInfoInputs.cache
+C:\repohome\Project-1\Mediatr\obj\Debug\netcoreapp2.2\Mediatr.AssemblyInfo.cs
+C:\repohome\Project-1\Mediatr\bin\Debug\netcoreapp2.2\Mediatr.deps.json
+C:\repohome\Project-1\Mediatr\bin\Debug\netcoreapp2.2\Mediatr.dll
+C:\repohome\Project-1\Mediatr\bin\Debug\netcoreapp2.2\Mediatr.pdb
+C:\repohome\Project-1\Mediatr\bin\Debug\netcoreapp2.2\CoreApp.dll
+C:\repohome\Project-1\Mediatr\bin\Debug\netcoreapp2.2\Data.dll
+C:\repohome\Project-1\Mediatr\bin\Debug\netcoreapp2.2\Model1.dll
+C:\repohome\Project-1\Mediatr\bin\Debug\netcoreapp2.2\CoreApp.pdb
+C:\repohome\Project-1\Mediatr\bin\Debug\netcoreapp2.2\Data.pdb
+C:\repohome\Project-1\Mediatr\bin\Debug\netcoreapp2.2\Model1.pdb
+C:\repohome\Project-1\Mediatr\obj\Debug\netcoreapp2.2\Mediatr.csproj.CopyComplete
+C:\repohome\Project-1\Mediatr\obj\Debug\netcoreapp2.2\Mediatr.dll
+C:\repohome\Project-1\Mediatr\obj\Debug\netcoreapp2.2\Mediatr.pdb

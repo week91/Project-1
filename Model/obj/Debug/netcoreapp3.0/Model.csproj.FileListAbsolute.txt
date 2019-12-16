@@ -1,0 +1,4 @@
+C:\repohome\Project-1\Model\bin\Debug\netcoreapp3.0\Model.deps.json
+C:\repohome\Project-1\Model\bin\Debug\netcoreapp3.0\Model.dll
+C:\repohome\Project-1\Model\obj\Debug\netcoreapp3.0\Model.AssemblyInfoInputs.cache
+C:\repohome\Project-1\Model\obj\Debug\netcoreapp3.0\Model.AssemblyInfo.cs

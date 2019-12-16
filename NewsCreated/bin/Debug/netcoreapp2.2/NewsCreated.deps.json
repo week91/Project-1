@@ -14,7 +14,18 @@
           "NewsCreated.dll": {}
         }
       },
-      "EntityFramework/6.4.0": {},
+      "EntityFramework/6.2.0": {
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.61023.0"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.61023.0"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.15": {
         "dependencies": {
           "System.Net.Http": "4.3.2",
@@ -1073,20 +1084,28 @@
           }
         }
       },
-      "Data/1.0.0": {
+      "CoreApp/1.0.0": {
         "dependencies": {
-          "EntityFramework": "6.4.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
-          "Microsoft.EntityFrameworkCore": "2.2.6"
+          "Microsoft.EntityFrameworkCore": "2.2.6",
+          "Model1": "1.0.0"
         },
         "runtime": {
-          "Data.dll": {}
+          "CoreApp.dll": {}
+        }
+      },
+      "Model1/1.0.0": {
+        "dependencies": {
+          "EntityFramework": "6.2.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0"
+        },
+        "runtime": {
+          "Model1.dll": {}
         }
       },
       "Services/1.0.0": {
         "dependencies": {
-          "Data": "1.0.0",
+          "CoreApp": "1.0.0",
           "HtmlAgilityPack": "1.11.15"
         },
         "runtime": {
@@ -1101,12 +1120,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "EntityFramework/6.4.0": {
+    "EntityFramework/6.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7jDmcQ3jaN5G7ZJC7Ecq161zQBs/5LqRzBdZ/I4XfmSvOwteGgNjOi30kthFador4Qjo3qUU6iOB1H04GIXrpg==",
-      "path": "entityframework/6.4.0",
-      "hashPath": "entityframework.6.4.0.nupkg.sha512"
+      "sha512": "sha512-ptGyXOf26qLrtn+2doAmylIlCxOnBJANwlyyLrXDmqIk9O18IzLWHyxDwwAyhgXkxmbiaA0WNpRy67WRReInBw==",
+      "path": "entityframework/6.2.0",
+      "hashPath": "entityframework.6.2.0.nupkg.sha512"
     },
     "HtmlAgilityPack/1.11.15": {
       "type": "package",
@@ -1920,7 +1939,12 @@
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
-    "Data/1.0.0": {
+    "CoreApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Model1/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

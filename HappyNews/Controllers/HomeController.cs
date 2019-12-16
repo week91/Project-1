@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using Core.Models;
-using HappyNews.Entities;
+using CoreApp;
 using Microsoft.AspNetCore.Mvc;
+using Model1;
 using Newtonsoft.Json;
 using Services;
-using Services.UoW;
 
 namespace HappyNews.Controllers
 {
@@ -30,7 +29,7 @@ namespace HappyNews.Controllers
 
             
 
-            _unitOfWork.Comments.Insert(NewComment);
+            _unitOfWork.Comments.Create(NewComment);
             _unitOfWork.Save();
                  
              

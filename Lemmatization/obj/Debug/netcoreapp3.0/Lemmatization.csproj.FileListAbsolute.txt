@@ -1,0 +1,5 @@
+C:\repohome\Project-1\Lemmatization\bin\Debug\netcoreapp3.0\Lemmatization.deps.json
+C:\repohome\Project-1\Lemmatization\bin\Debug\netcoreapp3.0\Lemmatization.dll
+C:\repohome\Project-1\Lemmatization\obj\Debug\netcoreapp3.0\Lemmatization.csprojAssemblyReference.cache
+C:\repohome\Project-1\Lemmatization\obj\Debug\netcoreapp3.0\Lemmatization.AssemblyInfoInputs.cache
+C:\repohome\Project-1\Lemmatization\obj\Debug\netcoreapp3.0\Lemmatization.AssemblyInfo.cs

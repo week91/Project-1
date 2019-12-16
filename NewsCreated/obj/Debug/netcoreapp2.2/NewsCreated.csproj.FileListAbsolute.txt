@@ -1,13 +1,15 @@
 C:\repohome\Project-1\NewsCreated\bin\Debug\netcoreapp2.2\NewsCreated.deps.json
 C:\repohome\Project-1\NewsCreated\bin\Debug\netcoreapp2.2\NewsCreated.dll
 C:\repohome\Project-1\NewsCreated\bin\Debug\netcoreapp2.2\NewsCreated.pdb
-C:\repohome\Project-1\NewsCreated\bin\Debug\netcoreapp2.2\Data.dll
 C:\repohome\Project-1\NewsCreated\bin\Debug\netcoreapp2.2\Services.dll
 C:\repohome\Project-1\NewsCreated\bin\Debug\netcoreapp2.2\Services.pdb
-C:\repohome\Project-1\NewsCreated\bin\Debug\netcoreapp2.2\Data.pdb
 C:\repohome\Project-1\NewsCreated\obj\Debug\netcoreapp2.2\NewsCreated.csprojAssemblyReference.cache
 C:\repohome\Project-1\NewsCreated\obj\Debug\netcoreapp2.2\NewsCreated.AssemblyInfoInputs.cache
 C:\repohome\Project-1\NewsCreated\obj\Debug\netcoreapp2.2\NewsCreated.AssemblyInfo.cs
 C:\repohome\Project-1\NewsCreated\obj\Debug\netcoreapp2.2\NewsCreated.csproj.CopyComplete
 C:\repohome\Project-1\NewsCreated\obj\Debug\netcoreapp2.2\NewsCreated.dll
 C:\repohome\Project-1\NewsCreated\obj\Debug\netcoreapp2.2\NewsCreated.pdb
+C:\repohome\Project-1\NewsCreated\bin\Debug\netcoreapp2.2\CoreApp.dll
+C:\repohome\Project-1\NewsCreated\bin\Debug\netcoreapp2.2\Model1.dll
+C:\repohome\Project-1\NewsCreated\bin\Debug\netcoreapp2.2\CoreApp.pdb
+C:\repohome\Project-1\NewsCreated\bin\Debug\netcoreapp2.2\Model1.pdb

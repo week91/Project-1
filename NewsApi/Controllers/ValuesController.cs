@@ -2,7 +2,7 @@
 using Hangfire;
 using Microsoft.AspNetCore.Mvc;
 
-namespace NewsApi.Controllers
+namespace Mediatr.Controllers
 {
 
 

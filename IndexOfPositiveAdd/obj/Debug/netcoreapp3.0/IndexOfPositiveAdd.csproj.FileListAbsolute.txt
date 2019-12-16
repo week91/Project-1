@@ -1,0 +1,17 @@
+C:\repohome\Project-1\IndexOfPositiveAdd\bin\Debug\netcoreapp3.0\IndexOfPositiveAdd.deps.json
+C:\repohome\Project-1\IndexOfPositiveAdd\bin\Debug\netcoreapp3.0\IndexOfPositiveAdd.runtimeconfig.json
+C:\repohome\Project-1\IndexOfPositiveAdd\bin\Debug\netcoreapp3.0\IndexOfPositiveAdd.runtimeconfig.dev.json
+C:\repohome\Project-1\IndexOfPositiveAdd\bin\Debug\netcoreapp3.0\IndexOfPositiveAdd.dll
+C:\repohome\Project-1\IndexOfPositiveAdd\bin\Debug\netcoreapp3.0\IndexOfPositiveAdd.pdb
+C:\repohome\Project-1\IndexOfPositiveAdd\bin\Debug\netcoreapp3.0\CoreApp.dll
+C:\repohome\Project-1\IndexOfPositiveAdd\bin\Debug\netcoreapp3.0\Data.dll
+C:\repohome\Project-1\IndexOfPositiveAdd\bin\Debug\netcoreapp3.0\Model1.dll
+C:\repohome\Project-1\IndexOfPositiveAdd\bin\Debug\netcoreapp3.0\CoreApp.pdb
+C:\repohome\Project-1\IndexOfPositiveAdd\bin\Debug\netcoreapp3.0\Data.pdb
+C:\repohome\Project-1\IndexOfPositiveAdd\bin\Debug\netcoreapp3.0\Model1.pdb
+C:\repohome\Project-1\IndexOfPositiveAdd\obj\Debug\netcoreapp3.0\IndexOfPositiveAdd.csprojAssemblyReference.cache
+C:\repohome\Project-1\IndexOfPositiveAdd\obj\Debug\netcoreapp3.0\IndexOfPositiveAdd.AssemblyInfoInputs.cache
+C:\repohome\Project-1\IndexOfPositiveAdd\obj\Debug\netcoreapp3.0\IndexOfPositiveAdd.AssemblyInfo.cs
+C:\repohome\Project-1\IndexOfPositiveAdd\obj\Debug\netcoreapp3.0\IndexOfPositiveAdd.csproj.CopyComplete
+C:\repohome\Project-1\IndexOfPositiveAdd\obj\Debug\netcoreapp3.0\IndexOfPositiveAdd.dll
+C:\repohome\Project-1\IndexOfPositiveAdd\obj\Debug\netcoreapp3.0\IndexOfPositiveAdd.pdb

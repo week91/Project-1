@@ -1,0 +1,8 @@
+C:\repohome\Project-1\Model\bin\Debug\netcoreapp2.2\Model1.deps.json
+C:\repohome\Project-1\Model\bin\Debug\netcoreapp2.2\Model1.dll
+C:\repohome\Project-1\Model\bin\Debug\netcoreapp2.2\Model1.pdb
+C:\repohome\Project-1\Model\obj\Debug\netcoreapp2.2\Model1.csprojAssemblyReference.cache
+C:\repohome\Project-1\Model\obj\Debug\netcoreapp2.2\Model1.AssemblyInfoInputs.cache
+C:\repohome\Project-1\Model\obj\Debug\netcoreapp2.2\Model1.AssemblyInfo.cs
+C:\repohome\Project-1\Model\obj\Debug\netcoreapp2.2\Model1.dll
+C:\repohome\Project-1\Model\obj\Debug\netcoreapp2.2\Model1.pdb

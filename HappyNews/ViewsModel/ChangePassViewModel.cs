@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace HappyNews.ViewsModel
+﻿namespace HappyNews.ViewsModel
 {
     public class ChangePassViewModel
     {

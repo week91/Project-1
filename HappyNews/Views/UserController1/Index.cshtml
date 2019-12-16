@@ -1,4 +1,4 @@
-﻿@model System.Collections.Generic.List<HappyNews.Models.User>
+﻿@model System.Collections.Generic.List<Model1.User>
 
 @{
     Layout = "_Layout";
@@ -19,7 +19,7 @@
     @foreach (var user in Model)
     {
         <tr>
-            <td>@user.NormalizedEmail</td>
+          
             <td>@user.FullName</td>
             <td>
                 <div class="btn-group" role="group" aria-label="...">

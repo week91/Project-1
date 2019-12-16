@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using NewsApi.Model;
 
-namespace NewsApi.Controllers
+namespace Mediatr.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
@@ -42,8 +42,8 @@ namespace NewsApi.Controllers
                 var appUser = _userManager.Users.SingleOrDefault(r => r.Email == model.Email);
                 return await GenerateJwtToken(model.Email, appUser);
             }
-            
-            throw new  Exception("INVALID_LOGIN_ATTEMPT");
+           
+            throw new  ApplicationException("INVALID_LOGIN_ATTEMPT");
         }
 
         [HttpPost]
@@ -86,7 +86,7 @@ namespace NewsApi.Controllers
                 signingCredentials: creds
             );
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            return  new JwtSecurityTokenHandler().WriteToken(token);
         }
 
     }

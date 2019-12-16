@@ -1,7 +1,4 @@
-﻿using Core;
-using Core.Repo;
-using Data.Models;
-using HappyNews.Entities;
+﻿using CoreApp;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -10,7 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Services.UoW;
+using Model1;
+using Services;
 
 namespace HappyNews
 {
@@ -32,8 +30,8 @@ namespace HappyNews
             //services.AddDbContext<ApplicationContext>(option => option.UseSqlServer(_conf.GetConnectionString("DefaultConnection")));
 
           
-            services.AddTransient<IGenericRepository<News>,NewsRepo>();
-            services.AddTransient<IGenericRepository<Comments>,CommentsRepo>();
+           
+           // services.AddTransient<IGenericRepository<Comments>,CommentsRepo>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
         
             services.AddIdentity<User, IdentityRole>()

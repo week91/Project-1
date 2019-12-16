@@ -1,0 +1,11 @@
+C:\repohome\Project-1\CoreApp\obj\Debug\netcoreapp2.2\CoreApp.csprojAssemblyReference.cache
+C:\repohome\Project-1\CoreApp\obj\Debug\netcoreapp2.2\CoreApp.AssemblyInfoInputs.cache
+C:\repohome\Project-1\CoreApp\obj\Debug\netcoreapp2.2\CoreApp.AssemblyInfo.cs
+C:\repohome\Project-1\CoreApp\bin\Debug\netcoreapp2.2\CoreApp.deps.json
+C:\repohome\Project-1\CoreApp\bin\Debug\netcoreapp2.2\CoreApp.dll
+C:\repohome\Project-1\CoreApp\bin\Debug\netcoreapp2.2\CoreApp.pdb
+C:\repohome\Project-1\CoreApp\bin\Debug\netcoreapp2.2\Model1.dll
+C:\repohome\Project-1\CoreApp\bin\Debug\netcoreapp2.2\Model1.pdb
+C:\repohome\Project-1\CoreApp\obj\Debug\netcoreapp2.2\CoreApp.csproj.CopyComplete
+C:\repohome\Project-1\CoreApp\obj\Debug\netcoreapp2.2\CoreApp.dll
+C:\repohome\Project-1\CoreApp\obj\Debug\netcoreapp2.2\CoreApp.pdb
