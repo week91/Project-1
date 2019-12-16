@@ -14,3 +14,4 @@ HappyNews/bin/Debug/netcoreapp2.2/HappyNews.runtimeconfig.json
 HappyNews/bin/Debug/netcoreapp2.2/HappyNews.Views.dll
 HappyNews/bin/Debug/netcoreapp2.2/HappyNews.Views.pdb
 *.cache
+*.cache
