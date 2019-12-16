@@ -27,7 +27,7 @@
     <ProjectReference Include="..\CoreApp\CoreApp.csproj" />
     <ProjectReference Include="..\Lemmatization\Lemmatization.csproj" />
     <ProjectReference Include="..\mmm\MyMediatr.csproj" />
-    <ProjectReference Include="..\NewsCreated\NewsCreated.csproj" />
+    <ProjectReference Include="..\ParsingNews\ParsingNews.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>
 

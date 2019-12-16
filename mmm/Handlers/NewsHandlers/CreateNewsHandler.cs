@@ -3,25 +3,27 @@ using System.Threading;
 using System.Threading.Tasks;
 using CoreApp;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Model1;
 using MyMediatr.Commands.NewsCommand;
 
 namespace MyMediatr.Handlers.NewsHandlers
 {
     public class CreateNewsHandler : IRequestHandler<CreateNewsCommand, Guid>
     {
-        private readonly IUnitOfWork _newsRepository;
+       DbContent _content;
 
-        public CreateNewsHandler(IUnitOfWork newsdata)
+        public CreateNewsHandler(DbContent _content)
         {
-            _newsRepository = newsdata;
+            this._content=_content;
         }
-        public Task<Guid> Handle(CreateNewsCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateNewsCommand request, CancellationToken cancellationToken)
         {
-            var id = _newsRepository.News.Create(request.News);
+            _content.Newses.Add(request.News);
+            var id = request.News.id;
+            _content.SaveChanges();
 
-            _newsRepository.Save();
-
-            return Task.FromResult(id);
+            return await Task.FromResult(id);
         }
     }
 }

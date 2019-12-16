@@ -1,29 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using CoreApp;
 using MediatR;
 using MyMediatr.Commands.CommentsCommand;
-using MyMediatr.Commands.NewsCommand;
 
 namespace MyMediatr.Handlers.CommentsHandler
 {
-   public class DeleteCommentHandler : IRequestHandler<RemoveCommentsCommand, bool>
-    {
-        private readonly IUnitOfWork _unitOfWork;
+    public class DeleteCommentHandler : IRequestHandler<RemoveCommentsCommand, string>
+   {
+       private DbContent _content;
 
-        public DeleteCommentHandler(IUnitOfWork _unitOfWork)
+        public DeleteCommentHandler(DbContent _content)
         {
-            this._unitOfWork = _unitOfWork;
+            this._content = _content;
         }
 
-        public Task<bool> Handle(RemoveCommentsCommand request, CancellationToken cancellationToken)
+        public async Task<string> Handle(RemoveCommentsCommand request, CancellationToken cancellationToken)
         {
-            var result = _unitOfWork.Comments.Delete(request.Id);
-            _unitOfWork.Save();
-            return Task.FromResult(result);
+            var result = _content.Comment.Where(c => c.id == request.Id).FirstOrDefault(); //get comment by id 
+            _content.Remove(result);                                                      // remove this news
+            _content.SaveChanges();
+            return await Task.FromResult(request.Id +"delete");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Model1;
 
@@ -9,7 +10,7 @@ namespace CoreApp
     {
         public DbSet<News> Newses { get; set; }
         public DbSet<Comments> Comment { get; set; }
-      //  public DbSet<IdentityUser> User { get; set; }
+        public DbSet<IdentityUser> User { get; set; }
        
        public DbContent(DbContextOptions<DbContent> options)
             : base(options)

@@ -25,6 +25,7 @@ using MyMediatr.Queries.CommentsQueries;
 using MyMediatr.Queries.NewsQueries;
 using Services;
 using Swashbuckle.AspNetCore.Swagger;
+using ParsingNews;
 
 namespace Mediatr
 {
@@ -51,22 +52,20 @@ namespace Mediatr
            
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<DbContent>().AddDefaultTokenProviders();
             services.AddHangfire(Configuration => Configuration.UseSqlServerStorage(_conf.GetConnectionString("DefaultConnection")));
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
-            services.AddTransient<IHangfireNews, HangfireNews>();
-            services.AddTransient<IGenericApiRepository<News>,NewsRepositoryMem<News> >();
-            services.AddTransient<IGenericApiRepository<Comments>,CommentsRepo >();
+           services.AddTransient<IHangfireNews, HangfireNews>();
+            
             services.AddTransient<IRaitOfPositiv, Positiv>();
             services.AddTransient<ILemmatization, LemmatizationImpl>();
             services.AddTransient<IAfinn165, Afinn165>();
             services.AddTransient<IParsUrlForRss, ParsUrlForRss>();
             services.AddTransient<IAddNews, AddNews>();
-            services.AddTransient< IRequestHandler<GetAllNewsQuery, IEnumerable<News>>, GetAllNewsHandler > ();
+            services.AddTransient< IRequestHandler<GetAllNewsQuery, DbSet<News>>, GetAllNewsHandler > ();
             services.AddTransient< IRequestHandler<GetNewsQuery, News>, GetNewsHandler > ();
-            services.AddTransient< IRequestHandler< CreateNewsCommand, Guid >, CreateNewsHandler > ();
-            services.AddTransient< IRequestHandler<RemoveNewsCommand, bool>, RemoveNewsHandler > ();
+            services.AddTransient< IRequestHandler<CreateNewsCommand, Guid >, CreateNewsHandler > ();
+            services.AddTransient< IRequestHandler<RemoveNewsCommand, string>, RemoveNewsHandler > ();
             services.AddTransient< IRequestHandler<CreateCommentCommand, Guid>, CreateCommentHandler> ();
-            services.AddTransient< IRequestHandler<RemoveCommentsCommand, bool>, DeleteCommentHandler > ();
-            services.AddTransient<IRequestHandler<GetCommentsQuery, IEnumerable<Comments>>, GetallCommentsHandler>();
+            services.AddTransient< IRequestHandler<RemoveCommentsCommand, string>, DeleteCommentHandler > ();
+            services.AddTransient<IRequestHandler<GetCommentsQuery, DbSet<Comments>>, GetallCommentsHandler>();
             services.AddTransient< IRequestHandler<GetCommentQuery, Comments>, GetCommentHandler > ();
 
             services.AddSwaggerGen(c =>
@@ -124,8 +123,8 @@ namespace Mediatr
 
             app.UseHangfireServer();
             app.UseHangfireDashboard();
-            // RecurringJob.AddOrUpdate( () => hangfireNews.TaskNewsAddStart(), Cron.Minutely);
-            RecurringJob.AddOrUpdate(() => rait.PositiveAdd(), Cron.Minutely);
+           RecurringJob.AddOrUpdate( () => hangfireNews.TaskNewsAddStart(), Cron.Minutely);
+           // RecurringJob.AddOrUpdate(() => rait.PositiveAdd(), Cron.Minutely);
          
  
 

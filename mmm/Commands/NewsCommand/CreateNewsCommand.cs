@@ -6,9 +6,9 @@ namespace MyMediatr.Commands.NewsCommand
 {
     public class CreateNewsCommand : IRequest<Guid>
     {
-        public CreateNewsCommand(News news1)
+        public CreateNewsCommand(News _news)
         {
-            News = news1;
+            News = _news;
         }
         public News News { get; }
 

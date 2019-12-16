@@ -9,16 +9,16 @@ namespace MyMediatr.Handlers.NewsHandlers
 {
     public class GetNewsHandler : IRequestHandler<GetNewsQuery, News>
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private DbContent _content;
 
-        public GetNewsHandler(IUnitOfWork _unitOfWork)
+        public GetNewsHandler(DbContent _content)
         {
-            this._unitOfWork = _unitOfWork;
+            this._content=_content;
         }
-        public Task<News> Handle(GetNewsQuery request, CancellationToken cancellationToken)
+        public async Task<News> Handle(GetNewsQuery request, CancellationToken cancellationToken)
         {
-            var result = _unitOfWork.News.GetById(request.Id);
-            return Task.FromResult(result);
+            var result = _content.Newses.Find(request.Id);  //get news by id
+            return await Task.FromResult(result);
         }
     }
 }

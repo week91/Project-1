@@ -8,9 +8,9 @@ namespace MyMediatr.Commands.CommentsCommand
 {
     public class CreateCommentCommand:IRequest<Guid>
     {
-        public CreateCommentCommand(Comments comment)
+        public CreateCommentCommand(Comments _comment)
         {
-           Comment = comment;
+            Comment = _comment;
         }
         public Comments Comment { get; }
     

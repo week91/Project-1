@@ -8,7 +8,7 @@ namespace MyMediatr.Queries.CommentsQueries
 {
     public class GetCommentQuery : IRequest<Comments>
     {
-        GetCommentQuery(Guid id)
+       public GetCommentQuery(Guid id)
         {
             Id = id;
         }

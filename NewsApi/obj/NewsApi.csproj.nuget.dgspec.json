@@ -317,8 +317,8 @@
               "C:\\repohome\\Project-1\\mmm\\MyMediatr.csproj": {
                 "projectPath": "C:\\repohome\\Project-1\\mmm\\MyMediatr.csproj"
               },
-              "C:\\repohome\\Project-1\\NewsCreated\\NewsCreated.csproj": {
-                "projectPath": "C:\\repohome\\Project-1\\NewsCreated\\NewsCreated.csproj"
+              "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj": {
+                "projectPath": "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj"
               },
               "C:\\repohome\\Project-1\\Services\\Services.csproj": {
                 "projectPath": "C:\\repohome\\Project-1\\Services\\Services.csproj"
@@ -409,14 +409,14 @@
         }
       }
     },
-    "C:\\repohome\\Project-1\\NewsCreated\\NewsCreated.csproj": {
+    "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repohome\\Project-1\\NewsCreated\\NewsCreated.csproj",
-        "projectName": "NewsCreated",
-        "projectPath": "C:\\repohome\\Project-1\\NewsCreated\\NewsCreated.csproj",
+        "projectUniqueName": "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj",
+        "projectName": "ParsingNews",
+        "projectPath": "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj",
         "packagesPath": "C:\\Users\\week\\.nuget\\packages\\",
-        "outputPath": "C:\\repohome\\Project-1\\NewsCreated\\obj\\",
+        "outputPath": "C:\\repohome\\Project-1\\ParsingNews\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -435,8 +435,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\repohome\\Project-1\\Services\\Services.csproj": {
-                "projectPath": "C:\\repohome\\Project-1\\Services\\Services.csproj"
+              "C:\\repohome\\Project-1\\CoreApp\\CoreApp.csproj": {
+                "projectPath": "C:\\repohome\\Project-1\\CoreApp\\CoreApp.csproj"
               }
             }
           }
@@ -450,6 +450,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.15, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",

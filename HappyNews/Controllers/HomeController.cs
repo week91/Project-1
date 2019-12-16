@@ -6,7 +6,7 @@ using CoreApp;
 using Microsoft.AspNetCore.Mvc;
 using Model1;
 using Newtonsoft.Json;
-using Services;
+using ParsingNews;
 
 namespace HappyNews.Controllers
 {
@@ -29,7 +29,7 @@ namespace HappyNews.Controllers
 
             
 
-            _unitOfWork.Comments.Create(NewComment);
+            _unitOfWork.Comments.Insert(NewComment);
             _unitOfWork.Save();
                  
              
@@ -97,13 +97,13 @@ namespace HappyNews.Controllers
             {
                 if (NewsInBase.Count() == 0)
                 {
-                    _unitOfWork.News.Create(newnews);
+                    _unitOfWork.News.Insert(newnews);
                 }
                 foreach (News newNews in NewsInBase)
                 {
                       if (newNews.Source != newnews.Source)
                       {
-                           _unitOfWork.News.Create(newnews);
+                           _unitOfWork.News.Insert(newnews);
                       }
 
                 }

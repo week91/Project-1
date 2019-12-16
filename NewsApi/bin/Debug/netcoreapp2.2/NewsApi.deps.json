@@ -38,7 +38,7 @@
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4",
           "MyMediatr": "1.0.0",
-          "NewsCreated": "1.0.0",
+          "ParsingNews": "1.0.0",
           "Services": "1.0.0",
           "Swashbuckle.AspNetCore": "4.0.1",
           "Swashbuckle.AspNetCore.SwaggerGen": "4.0.1"
@@ -781,15 +781,16 @@
           "MyMediatr.dll": {}
         }
       },
-      "NewsCreated/1.0.0": {
+      "ParsingNews/1.0.0": {
         "dependencies": {
-          "Services": "1.0.0"
+          "CoreApp": "1.0.0",
+          "HtmlAgilityPack": "1.11.15"
         },
         "runtime": {
-          "NewsCreated.dll": {}
+          "ParsingNews.dll": {}
         },
         "compile": {
-          "NewsCreated.dll": {}
+          "ParsingNews.dll": {}
         }
       },
       "Services/1.0.0": {
@@ -4187,7 +4188,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "NewsCreated/1.0.0": {
+    "ParsingNews/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

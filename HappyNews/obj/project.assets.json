@@ -4810,6 +4810,20 @@
           "bin/placeholder/Model1.dll": {}
         }
       },
+      "ParsingNews/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "CoreApp": "1.0.0",
+          "HtmlAgilityPack": "1.11.15"
+        },
+        "compile": {
+          "bin/placeholder/ParsingNews.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ParsingNews.dll": {}
+        }
+      },
       "Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -4822,6 +4836,19 @@
         },
         "runtime": {
           "bin/placeholder/Services.dll": {}
+        }
+      },
+      "UofW/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "CoreApp": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UofW.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UofW.dll": {}
         }
       }
     }
@@ -13153,10 +13180,20 @@
       "path": "../Model/Model1.csproj",
       "msbuildProject": "../Model/Model1.csproj"
     },
+    "ParsingNews/1.0.0": {
+      "type": "project",
+      "path": "../ParsingNews/ParsingNews.csproj",
+      "msbuildProject": "../ParsingNews/ParsingNews.csproj"
+    },
     "Services/1.0.0": {
       "type": "project",
       "path": "../Services/Services.csproj",
       "msbuildProject": "../Services/Services.csproj"
+    },
+    "UofW/1.0.0": {
+      "type": "project",
+      "path": "../UofW/UofW.csproj",
+      "msbuildProject": "../UofW/UofW.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13170,8 +13207,10 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4",
       "Newtonsoft.Json >= 12.0.3",
+      "ParsingNews >= 1.0.0",
       "Services >= 1.0.0",
-      "Swashbuckle.AspNetCore.Swagger >= 4.0.1"
+      "Swashbuckle.AspNetCore.Swagger >= 4.0.1",
+      "UofW >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -13204,8 +13243,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj": {
+              "projectPath": "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj"
+            },
             "C:\\repohome\\Project-1\\Services\\Services.csproj": {
               "projectPath": "C:\\repohome\\Project-1\\Services\\Services.csproj"
+            },
+            "C:\\repohome\\Project-1\\UofW\\UofW.csproj": {
+              "projectPath": "C:\\repohome\\Project-1\\UofW\\UofW.csproj"
             }
           }
         }

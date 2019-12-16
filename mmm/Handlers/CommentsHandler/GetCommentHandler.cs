@@ -1,28 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using CoreApp;
 using MediatR;
 using Model1;
 using MyMediatr.Queries.CommentsQueries;
-using MyMediatr.Queries.NewsQueries;
 
 namespace MyMediatr.Handlers.CommentsHandler
 {
    public class GetCommentHandler : IRequestHandler<GetCommentQuery, Comments>
     {
-        private readonly IUnitOfWork _unitOfWork;
+       DbContent _content;
 
-        public GetCommentHandler (IUnitOfWork _unitOfWork)
+        public GetCommentHandler(DbContent _contentk)
         {
-            this._unitOfWork = _unitOfWork;
+            this._content=_contentk;
         }
-        public Task<Comments> Handle(GetCommentQuery request, CancellationToken cancellationToken)
+        public async Task<Comments> Handle(GetCommentQuery request, CancellationToken cancellationToken)
         {
-            var result = _unitOfWork.Comments.GetById(request.Id);
-            return Task.FromResult(result);
+            var result = _content.Comment.Find(request.Id);
+            return await Task.FromResult(result);
         }
     
     }

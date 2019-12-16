@@ -23,21 +23,34 @@ namespace NewsApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<News>> Get() =>         //Get All News 
-            
-            await mediator.Send(new GetAllNewsQuery());
+        public async Task<IActionResult> Get()
+        {
+            var result = await mediator.Send(new GetAllNewsQuery());  //Get All News 
+            return Ok(result);
+        }
 
-        [HttpGet("{id}")]                             //Get by id 
-        public async Task<News> Get(Guid id) =>
-            await mediator.Send(new GetNewsQuery(id));
+
+
+        [HttpGet("{id}")] //Get by id 
+        public async Task<IActionResult> Get(Guid id)
+        {
+          var result = await mediator.Send(new GetNewsQuery(id));
+            return Ok(result);
+        }
 
         [HttpPost]
-        public async Task<Guid> Create([FromBody]News news) =>
-            await mediator.Send(new CreateNewsCommand(news));
+        public async Task<IActionResult> Create([FromBody] News news)
+        {
+            var result = await mediator.Send(new CreateNewsCommand(news));
+            return  Ok(result);
+        }
 
         [HttpDelete("{id}")]
-        public async Task<bool> Delete(Guid id) =>
-            await mediator.Send(new RemoveNewsCommand(id));
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var result = await mediator.Send(new RemoveNewsCommand(id));
+           return Ok(result);
+        }
 
     }
 }

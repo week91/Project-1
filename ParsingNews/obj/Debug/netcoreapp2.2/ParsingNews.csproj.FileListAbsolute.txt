@@ -1,0 +1,13 @@
+C:\repohome\Project-1\ParsingNews\bin\Debug\netcoreapp2.2\ParsingNews.deps.json
+C:\repohome\Project-1\ParsingNews\bin\Debug\netcoreapp2.2\ParsingNews.dll
+C:\repohome\Project-1\ParsingNews\bin\Debug\netcoreapp2.2\CoreApp.dll
+C:\repohome\Project-1\ParsingNews\bin\Debug\netcoreapp2.2\Model1.dll
+C:\repohome\Project-1\ParsingNews\bin\Debug\netcoreapp2.2\CoreApp.pdb
+C:\repohome\Project-1\ParsingNews\bin\Debug\netcoreapp2.2\Model1.pdb
+C:\repohome\Project-1\ParsingNews\obj\Debug\netcoreapp2.2\ParsingNews.AssemblyInfoInputs.cache
+C:\repohome\Project-1\ParsingNews\obj\Debug\netcoreapp2.2\ParsingNews.AssemblyInfo.cs
+C:\repohome\Project-1\ParsingNews\obj\Debug\netcoreapp2.2\ParsingNews.csproj.CopyComplete
+C:\repohome\Project-1\ParsingNews\bin\Debug\netcoreapp2.2\ParsingNews.pdb
+C:\repohome\Project-1\ParsingNews\obj\Debug\netcoreapp2.2\ParsingNews.csprojAssemblyReference.cache
+C:\repohome\Project-1\ParsingNews\obj\Debug\netcoreapp2.2\ParsingNews.dll
+C:\repohome\Project-1\ParsingNews\obj\Debug\netcoreapp2.2\ParsingNews.pdb

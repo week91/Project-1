@@ -1,31 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using CoreApp;
 using MediatR;
 using MyMediatr.Commands.CommentsCommand;
-using MyMediatr.Commands.NewsCommand;
 
 namespace MyMediatr.Handlers.CommentsHandler
 {
     public class CreateCommentHandler : IRequestHandler<CreateCommentCommand, Guid>
     {
-        private readonly IUnitOfWork _newsRepository;
-
-        public CreateCommentHandler(IUnitOfWork comentdata)
+        
+        private readonly DbContent _context;
+        public CreateCommentHandler( DbContent context)
         {
-            _newsRepository = comentdata;
+            this._context =context;
+            
         }
 
-        public Task<Guid> Handle(CreateCommentCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateCommentCommand request, CancellationToken cancellationToken)
         {
-            var id = _newsRepository.Comments.Create(request.Comment);
+            _context.Comment.Add(request.Comment);         //add comment to db
+            var id = request.Comment.id;
+           _context.SaveChanges();
 
-            _newsRepository.Save();
-
-            return Task.FromResult(id);
+            return await Task.FromResult(id);
         }
     }
 }

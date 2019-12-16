@@ -5,8 +5,8 @@ namespace CoreApp
 {
     public interface IUnitOfWork : IDisposable
     {
-        IGenericApiRepository<News> News { get; }
-        IGenericApiRepository<Comments> Comments { get; }
+        IGenericRepository<News> News { get; }
+        IGenericRepository<Comments> Comments { get; }
         void Save();
     }
 }

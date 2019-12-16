@@ -5,14 +5,14 @@ namespace IndexOfPositiveAdd
     public class Positiv : IRaitOfPositiv
 
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly DbContent _dbContent;
         private readonly ILemmatization _lemmatization; 
         private readonly IAfinn165 _afinn165; 
         
 
-        public Positiv(IUnitOfWork unitOfWork, ILemmatization lemmatization,IAfinn165 afinn165) 
+        public Positiv(DbContent dbContent, ILemmatization lemmatization,IAfinn165 afinn165)
         {
-            _unitOfWork = unitOfWork;
+            _dbContent = dbContent;
             _lemmatization = lemmatization;
             _afinn165 = afinn165;
         }
@@ -20,7 +20,7 @@ namespace IndexOfPositiveAdd
         public void PositiveAdd()
         {
             var dictAfinn = _afinn165.Afinn();
-             var news= _unitOfWork.News.GetAll();
+             var news= _dbContent.Newses;
             foreach (var newse in news)
             {
                 if (newse.IndexOfPositive == 0)
@@ -40,8 +40,9 @@ namespace IndexOfPositiveAdd
                     }
 
                   newse.IndexOfPositive=  rait / wordUnraitNews.Count;
-                  _unitOfWork.News.Update(newse);
-                  _unitOfWork.Save();
+                 // _unitOfWork.News.Update(newse);
+                  _dbContent.Newses.Add(newse);
+                  _dbContent.SaveChanges();
 
                 }
               

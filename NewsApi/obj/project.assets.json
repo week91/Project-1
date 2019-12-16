@@ -4966,17 +4966,18 @@
           "bin/placeholder/MyMediatr.dll": {}
         }
       },
-      "NewsCreated/1.0.0": {
+      "ParsingNews/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "Services": "1.0.0"
+          "CoreApp": "1.0.0",
+          "HtmlAgilityPack": "1.11.15"
         },
         "compile": {
-          "bin/placeholder/NewsCreated.dll": {}
+          "bin/placeholder/ParsingNews.dll": {}
         },
         "runtime": {
-          "bin/placeholder/NewsCreated.dll": {}
+          "bin/placeholder/ParsingNews.dll": {}
         }
       },
       "Services/1.0.0": {
@@ -13490,10 +13491,10 @@
       "path": "../mmm/MyMediatr.csproj",
       "msbuildProject": "../mmm/MyMediatr.csproj"
     },
-    "NewsCreated/1.0.0": {
+    "ParsingNews/1.0.0": {
       "type": "project",
-      "path": "../NewsCreated/NewsCreated.csproj",
-      "msbuildProject": "../NewsCreated/NewsCreated.csproj"
+      "path": "../ParsingNews/ParsingNews.csproj",
+      "msbuildProject": "../ParsingNews/ParsingNews.csproj"
     },
     "Services/1.0.0": {
       "type": "project",
@@ -13517,7 +13518,7 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4",
       "MyMediatr >= 1.0.0",
-      "NewsCreated >= 1.0.0",
+      "ParsingNews >= 1.0.0",
       "Services >= 1.0.0",
       "Swashbuckle.AspNetCore >= 4.0.1",
       "Swashbuckle.AspNetCore.SwaggerGen >= 4.0.1"
@@ -13562,8 +13563,8 @@
             "C:\\repohome\\Project-1\\mmm\\MyMediatr.csproj": {
               "projectPath": "C:\\repohome\\Project-1\\mmm\\MyMediatr.csproj"
             },
-            "C:\\repohome\\Project-1\\NewsCreated\\NewsCreated.csproj": {
-              "projectPath": "C:\\repohome\\Project-1\\NewsCreated\\NewsCreated.csproj"
+            "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj": {
+              "projectPath": "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj"
             },
             "C:\\repohome\\Project-1\\Services\\Services.csproj": {
               "projectPath": "C:\\repohome\\Project-1\\Services\\Services.csproj"

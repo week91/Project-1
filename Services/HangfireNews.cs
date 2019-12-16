@@ -5,19 +5,21 @@ namespace Services
 {
     public class HangfireNews : IHangfireNews
     {
-        private readonly IUnitOfWork _unitOfWork;
+    
         private readonly IParsUrlForRss _parsUrlForRss;
         private readonly IAddNews _addNews;
+        private DbContent _dbContent;
 
-      public  HangfireNews(IUnitOfWork unitOfWork, IParsUrlForRss parsUrlForRss, IAddNews addNews)
+      public  HangfireNews( IParsUrlForRss parsUrlForRss, IAddNews addNews, DbContent dbContent)
         {
-            _unitOfWork = unitOfWork;
+           
             _parsUrlForRss =parsUrlForRss;
             _addNews = addNews;
+            _dbContent = dbContent;
         }
         public bool TaskNewsAddStart()
         {
-            var newsinbase = _unitOfWork.News.GetAll(); // get news 
+            var newsinbase = _dbContent.Newses; // get news 
 
             var urlForNewsList =_parsUrlForRss.AddUrls(); //pars url newses
 
@@ -39,9 +41,10 @@ namespace Services
            var news =_addNews.AddNewsList(parsUrlList); //pars news and add to base
             foreach (var newnews in news)
             {
-            _unitOfWork.News.Create(newnews);
+            _dbContent.Newses.Add(newnews);
             }
-            _unitOfWork.Save();
+
+            _dbContent.SaveChanges();
             return true;
         }
     }

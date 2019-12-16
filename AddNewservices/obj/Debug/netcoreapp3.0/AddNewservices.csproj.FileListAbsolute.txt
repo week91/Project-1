@@ -1,8 +1,0 @@
-C:\repohome\Project-1\AddNewservices\bin\Debug\netcoreapp3.0\AddNewservices.deps.json
-C:\repohome\Project-1\AddNewservices\bin\Debug\netcoreapp3.0\AddNewservices.dll
-C:\repohome\Project-1\AddNewservices\bin\Debug\netcoreapp3.0\AddNewservices.pdb
-C:\repohome\Project-1\AddNewservices\obj\Debug\netcoreapp3.0\AddNewservices.csprojAssemblyReference.cache
-C:\repohome\Project-1\AddNewservices\obj\Debug\netcoreapp3.0\AddNewservices.AssemblyInfoInputs.cache
-C:\repohome\Project-1\AddNewservices\obj\Debug\netcoreapp3.0\AddNewservices.AssemblyInfo.cs
-C:\repohome\Project-1\AddNewservices\obj\Debug\netcoreapp3.0\AddNewservices.dll
-C:\repohome\Project-1\AddNewservices\obj\Debug\netcoreapp3.0\AddNewservices.pdb

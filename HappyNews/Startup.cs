@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Model1;
-using Services;
+using UofW;
 
 namespace HappyNews
 {
@@ -27,11 +27,11 @@ namespace HappyNews
         {
             services.AddDbContext<DbContent>(option=>option.UseSqlServer(_conf.GetConnectionString("DefaultConnection")));
 
-            //services.AddDbContext<ApplicationContext>(option => option.UseSqlServer(_conf.GetConnectionString("DefaultConnection")));
+           
 
           
            
-           // services.AddTransient<IGenericRepository<Comments>,CommentsRepo>();
+            services.AddTransient<IGenericRepository<Comments>,CommentsRepo>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
         
             services.AddIdentity<User, IdentityRole>()

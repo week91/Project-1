@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using CoreApp;
 using MediatR;
@@ -6,19 +7,21 @@ using MyMediatr.Commands.NewsCommand;
 
 namespace MyMediatr.Handlers.NewsHandlers
 {
-    public class RemoveNewsHandler : IRequestHandler<RemoveNewsCommand, bool>
+    public class RemoveNewsHandler : IRequestHandler<RemoveNewsCommand, string>
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private DbContent _content;
 
-        public RemoveNewsHandler(IUnitOfWork _unitOfWork)
+        public RemoveNewsHandler(DbContent _content)
         {
-            this._unitOfWork = _unitOfWork;
+            this._content=_content;
         }
-        public Task<bool> Handle(RemoveNewsCommand request, CancellationToken cancellationToken)
+
+        public async Task<string> Handle(RemoveNewsCommand request, CancellationToken cancellationToken)
         {
-            var result = _unitOfWork.News.Delete(request.Id);
-            _unitOfWork.Save();
-            return Task.FromResult(result);
-        }
+            var news = _content.Newses.Where(n => n.id == request.Id).FirstOrDefault(); //get news by id 
+            _content.Remove(news); // remove this news
+            _content.SaveChanges();
+            return await Task.FromResult(request.Id +"  delete");
+    }
     }
 }

@@ -100,8 +100,14 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
+              "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj": {
+                "projectPath": "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj"
+              },
               "C:\\repohome\\Project-1\\Services\\Services.csproj": {
                 "projectPath": "C:\\repohome\\Project-1\\Services\\Services.csproj"
+              },
+              "C:\\repohome\\Project-1\\UofW\\UofW.csproj": {
+                "projectPath": "C:\\repohome\\Project-1\\UofW\\UofW.csproj"
               }
             }
           }
@@ -243,6 +249,72 @@
         }
       }
     },
+    "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj",
+        "projectName": "ParsingNews",
+        "projectPath": "C:\\repohome\\Project-1\\ParsingNews\\ParsingNews.csproj",
+        "packagesPath": "C:\\Users\\week\\.nuget\\packages\\",
+        "outputPath": "C:\\repohome\\Project-1\\ParsingNews\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\week\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\repohome\\Project-1\\CoreApp\\CoreApp.csproj": {
+                "projectPath": "C:\\repohome\\Project-1\\CoreApp\\CoreApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.15, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\repohome\\Project-1\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -288,6 +360,68 @@
               "target": "Package",
               "version": "[1.11.15, )"
             },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\repohome\\Project-1\\UofW\\UofW.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repohome\\Project-1\\UofW\\UofW.csproj",
+        "projectName": "UofW",
+        "projectPath": "C:\\repohome\\Project-1\\UofW\\UofW.csproj",
+        "packagesPath": "C:\\Users\\week\\.nuget\\packages\\",
+        "outputPath": "C:\\repohome\\Project-1\\UofW\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\week\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\repohome\\Project-1\\CoreApp\\CoreApp.csproj": {
+                "projectPath": "C:\\repohome\\Project-1\\CoreApp\\CoreApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",

@@ -18,8 +18,6 @@ C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.dll
 C:\repohome\Project-1\NewsApi\obj\Debug\netcoreapp2.2\NewsApi.pdb
 C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\Services.dll
 C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\Services.pdb
-C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\NewsCreated.dll
-C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\NewsCreated.pdb
 C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\CoreApp.dll
 C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\Model1.dll
 C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\CoreApp.pdb
@@ -28,3 +26,5 @@ C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\MyMediatr.dll
 C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\MyMediatr.pdb
 C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\Lemmatization.dll
 C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\Lemmatization.pdb
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\ParsingNews.dll
+C:\repohome\Project-1\NewsApi\bin\Debug\netcoreapp2.2\ParsingNews.pdb

@@ -2,7 +2,7 @@
 
 namespace CoreApp
 {
-    public class CommentsRepo : NewsRepositoryMem<Comments>
+    public class CommentsRepo : EntityFrameworkRepo<Comments>
     {
         public CommentsRepo(DbContent _context) : base(_context)
         {
