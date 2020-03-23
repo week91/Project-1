@@ -52,3 +52,7 @@ C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\CoreApp.dll
 C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\Model1.dll
 C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\CoreApp.pdb
 C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\Model1.pdb
+C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\ParsingNews.dll
+C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\UofW.dll
+C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\ParsingNews.pdb
+C:\repohome\Project-1\HappyNews\bin\Debug\netcoreapp2.2\UofW.pdb

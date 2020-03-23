@@ -46,6 +46,10 @@ namespace Mediatr
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
+
+
             services.AddMediatR(typeof(Startup));
             services.AddDbContext<DbContent>(option => option.UseSqlServer(_conf.GetConnectionString("DefaultConnection")));
            
@@ -123,11 +127,11 @@ namespace Mediatr
             app.UseHangfireServer();
             app.UseHangfireDashboard();
            RecurringJob.AddOrUpdate( () => hangfireNews.TaskNewsAddStart(), Cron.Minutely);
-           // RecurringJob.AddOrUpdate(() => rait.PositiveAdd(), Cron.Minutely);
-         
- 
+            // RecurringJob.AddOrUpdate(() => rait.PositiveAdd(), Cron.Minutely);
 
-             app.UseAuthentication();
+            app.UseCors(builder => builder.AllowAnyOrigin());
+
+            app.UseAuthentication();
             app.UseMvc();
         }
     }
