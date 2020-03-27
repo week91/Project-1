@@ -29,7 +29,7 @@ namespace ParsingNews
                     HtmlWeb web = new HtmlWeb();
                     var htmlDoc = web.Load(html);
 
-                    var htmlBody2 = htmlDoc.DocumentNode.SelectNodes("//div [@class='js-mediator-article']");
+                    var htmlBody2 = htmlDoc.DocumentNode.SelectNodes("//div [@class='content']");
                     if (htmlBody2 != null)
                     {
 

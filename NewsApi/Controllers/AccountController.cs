@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Model1.Model;
+using Newtonsoft.Json;
 
 namespace Mediatr.Controllers
 {
@@ -40,7 +41,16 @@ namespace Mediatr.Controllers
             if (result.Succeeded)
             {
                 var appUser = _userManager.Users.SingleOrDefault(r => r.Email == model.Email);
-                return await GenerateJwtToken(model.Email, appUser);
+
+                var jwt = GenerateJwtToken(model.Email, appUser);
+                var response = new
+                {
+                    email = model.Email,
+                   jwt
+                    
+                };
+
+                return  response;
             }
            
             throw new  ApplicationException("INVALID_LOGIN_ATTEMPT");
@@ -59,7 +69,16 @@ namespace Mediatr.Controllers
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, false);
-                return await GenerateJwtToken(model.Email, user);
+               var token= await GenerateJwtToken(model.Email, user);
+
+               var response = new
+               {
+                   access_token = token,
+                   username = user.UserName,
+                   id=user.Id,
+               };
+
+                return JsonConvert.SerializeObject(response);
             }
 
             throw new ApplicationException("UNKNOWN_ERROR");
